@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c2cdbk2ehc4o3"]
+
+[ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://actor.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://bx40bofn7yy27" path="res://icon.svg" id="2_epypp"]
+
+[sub_resource type="GDScript" id="GDScript_upcyq"]
+script/source = "extends Node2D
+
+func _ready():
+	print(Input.get_joy_info(0))
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_0tef2"]
+script/source = "extends CharacterBody2D
+
+func _physics_process(delta: float) -> void:
+	self.velocity.x = $\"../Actor1\".x_velocity * 1000.0
+	self.move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tef2"]
+
+[node name="Node2D" type="Node2D" unique_id=1196964039]
+script = SubResource("GDScript_upcyq")
+
+[node name="Actor1" type="Node" parent="." unique_id=1472452438]
+script = ExtResource("1_0e48y")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=701401701]
+script = SubResource("GDScript_0tef2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2117037961]
+shape = SubResource("CircleShape2D_0tef2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=193708502]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1196578282]
+zoom = Vector2(0.5, 0.5)
