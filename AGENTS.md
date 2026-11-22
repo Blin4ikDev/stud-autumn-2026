@@ -1,5 +1,7 @@
 # studclub — interactive show background
 
+Show: **«Студ Осень 2026»** (Stud Autumn 2026).
+
 This project is an **interactive background for a live show**: a Windows 10 (dark)
 desktop recreated with Godot UI nodes. Show code binds to the desktop root and drives
 it (open folders, swap icons, recolor wallpaper, etc.).
