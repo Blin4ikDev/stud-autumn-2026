@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr11jdfs3k3y5"
-path="res://.godot/imported/chevron_up.svg-e7ce97c6b5c06e7d454af0aa3b003944.ctex"
+uid="uid://dh8dabi1hk6ow"
+path="res://.godot/imported/windows_logo.svg-60135d85203916e01200eac74464b8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/win10/chevron_up.svg"
-dest_files=["res://.godot/imported/chevron_up.svg-e7ce97c6b5c06e7d454af0aa3b003944.ctex"]
+source_file="res://vibecoded/assets/icons/win10/windows_logo.svg"
+dest_files=["res://.godot/imported/windows_logo.svg-60135d85203916e01200eac74464b8fe.ctex"]
 
 [params]
 

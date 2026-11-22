@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh8dabi1hk6ow"
-path="res://.godot/imported/windows_logo.svg-4d78703c3be0cf59599da2706b5cb158.ctex"
+uid="uid://baeu4vstr2xjl"
+path="res://.godot/imported/folder.svg-348e138c8463415ac88a526f896f1d5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/win10/windows_logo.svg"
-dest_files=["res://.godot/imported/windows_logo.svg-4d78703c3be0cf59599da2706b5cb158.ctex"]
+source_file="res://vibecoded/assets/icons/win10/folder.svg"
+dest_files=["res://.godot/imported/folder.svg-348e138c8463415ac88a526f896f1d5d.ctex"]
 
 [params]
 
