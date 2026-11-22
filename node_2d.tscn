@@ -1,25 +1,128 @@
 [gd_scene format=3 uid="uid://c2cdbk2ehc4o3"]
 
 [ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://actor.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://bx40bofn7yy27" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://b8kv7vn1lryng" path="res://assets/textures/niko_spritesheet.png" id="2_0e48y"]
 
 [sub_resource type="GDScript" id="GDScript_upcyq"]
 script/source = "extends Node2D
 
 func _ready():
-	print(Input.get_joy_info(0))
 	pass
 "
 
 [sub_resource type="GDScript" id="GDScript_0tef2"]
 script/source = "extends CharacterBody2D
 
-func _physics_process(delta: float) -> void:
-	self.velocity.x = $\"../Actor1\".x_velocity * 1000.0
+@export var actor: Actor
+
+@onready var sprite = $AnimatedSprite2D
+
+func _ready():
+	if self.actor == null:
+		self.actor = $\"../Actor1\"
+	
+	sprite.play(\"default\")
+	self.actor.trigger_action.connect(self.action)
+func _exit_tree() -> void:
+	self.actor.trigger_action.disconnect(self.action)
+
+func action():
+	self.position.x += 100.0
+
+func _physics_process(_delta: float) -> void:
+	if abs(self.actor.x_velocity) < 0.1:
+		sprite.animation = \"default\"
+	elif sign(self.actor.x_velocity) == 1:
+		sprite.animation = \"walk_right\"
+	elif sign(self.actor.x_velocity) == -1:
+		sprite.animation = \"walk_left\"
+	
+	self.velocity.x = self.actor.x_velocity * 10.0
 	self.move_and_slide()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0tef2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(88, 268, 48, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(85, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(134, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(183, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(232, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(89, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(137, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(185, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(233, 396, 46, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tef2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1196964039]
 script = SubResource("GDScript_upcyq")
@@ -27,15 +130,14 @@ script = SubResource("GDScript_upcyq")
 [node name="Actor1" type="Node" parent="." unique_id=1472452438]
 script = ExtResource("1_0e48y")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=701401701]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=701401701 node_paths=PackedStringArray("actor")]
 script = SubResource("GDScript_0tef2")
+actor = NodePath("../Actor1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2117037961]
 shape = SubResource("CircleShape2D_0tef2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=193708502]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_epypp")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=130852843]
+sprite_frames = SubResource("SpriteFrames_0tef2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1196578282]
-zoom = Vector2(0.5, 0.5)

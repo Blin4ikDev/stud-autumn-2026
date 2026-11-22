@@ -1,119 +1,119 @@
 [gd_resource type="Theme" format=3 uid="uid://cnjtetudthuan"]
 
-[ext_resource type="FontFile" uid="uid://80f5vdk0lhte" path="res://addons/windows_NT_theme/MS Sans Serif.ttf" id="1_ewhgx"]
-[ext_resource type="Texture2D" uid="uid://c1833rva8bi5u" path="res://addons/windows_NT_theme/Windows_NT_panel1.png" id="2_6pbjp"]
-[ext_resource type="Texture2D" uid="uid://xpia3nv1ivsg" path="res://addons/windows_NT_theme/Windows_NT_panel2.png" id="3_arfj1"]
-[ext_resource type="Texture2D" uid="uid://decstt4wbp31w" path="res://addons/windows_NT_theme/Windows_NT_panel5.png" id="4_q03h8"]
-[ext_resource type="Texture2D" uid="uid://d12ct5xjy8ppl" path="res://addons/windows_NT_theme/Windows_NT_panel11.png" id="5_jk2kt"]
-[ext_resource type="Texture2D" uid="uid://d2x4us7finahw" path="res://addons/windows_NT_theme/Windows_NT_panel6.png" id="5_l7q18"]
-[ext_resource type="Texture2D" uid="uid://b15rexdw7nmn7" path="res://addons/windows_NT_theme/Windows_NT_panel7.png" id="6_c52bi"]
-[ext_resource type="Texture2D" uid="uid://t7wopq302hlj" path="res://addons/windows_NT_theme/check_disabled.png" id="6_mkec4"]
-[ext_resource type="Texture2D" uid="uid://f25tislcse3m" path="res://addons/windows_NT_theme/Windows_NT_panel10.png" id="6_rxq7s"]
-[ext_resource type="Texture2D" uid="uid://xeuh2k457n21" path="res://addons/windows_NT_theme/radio_checked.png" id="7_1f4vn"]
-[ext_resource type="Texture2D" uid="uid://drtyqsu3p4y1j" path="res://addons/windows_NT_theme/Windows_NT_panel8.png" id="7_4u7av"]
-[ext_resource type="Texture2D" uid="uid://c1km5n07p5t7v" path="res://addons/windows_NT_theme/radio_checked_disabled.png" id="8_l5p1p"]
-[ext_resource type="Texture2D" uid="uid://c7m07tr4c0ajt" path="res://addons/windows_NT_theme/Windows_NT_panel9.png" id="8_mg6gf"]
-[ext_resource type="Texture2D" uid="uid://dsfh0rybdwh1s" path="res://addons/windows_NT_theme/unchecked_disabled.png" id="8_n0blh"]
-[ext_resource type="Texture2D" uid="uid://bwms5fmgamnyo" path="res://addons/windows_NT_theme/radio_unchecked.png" id="9_dpehg"]
-[ext_resource type="Texture2D" uid="uid://dxx6bs8aqtahq" path="res://addons/windows_NT_theme/Windows_NT_panel12.png" id="9_xl0vj"]
-[ext_resource type="Texture2D" uid="uid://k7rjuus1d4bq" path="res://addons/windows_NT_theme/radio_unchecked_disabled.png" id="10_74gfq"]
-[ext_resource type="Texture2D" uid="uid://bglwmc1p0g780" path="res://addons/windows_NT_theme/Windows_NT_panel13.png" id="10_omu8u"]
-[ext_resource type="Texture2D" uid="uid://b4ee6b2c23r5y" path="res://addons/windows_NT_theme/menu.png" id="13_40raw"]
-[ext_resource type="Texture2D" uid="uid://bor14ncoefmbi" path="res://addons/windows_NT_theme/minus.png" id="13_sxmyg"]
-[ext_resource type="Texture2D" uid="uid://cqoqid4x5nmkw" path="res://addons/windows_NT_theme/plus.png" id="14_1i4yn"]
-[ext_resource type="Texture2D" uid="uid://daat8crwacal" path="res://addons/windows_NT_theme/tab1.png" id="14_lrd5n"]
-[ext_resource type="Texture2D" uid="uid://7avnfcwnd7yf" path="res://addons/windows_NT_theme/close.png" id="15_fhcp3"]
-[ext_resource type="Texture2D" uid="uid://dfowy3tdax43h" path="res://addons/windows_NT_theme/arrow.png" id="17_0ho7r"]
-[ext_resource type="Texture2D" uid="uid://d3ltxplgcdrom" path="res://addons/windows_NT_theme/close_pressed.png" id="25_axb7h"]
-[ext_resource type="Texture2D" uid="uid://lt168d2iwcl3" path="res://addons/windows_NT_theme/paper_add.png" id="27_paper_add"]
-[ext_resource type="Texture2D" uid="uid://d0sxcdp73tc88" path="res://addons/windows_NT_theme/save.png" id="28_save_icon"]
-[ext_resource type="Texture2D" uid="uid://cty3p37hu3neu" path="res://addons/windows_NT_theme/add.png" id="29_add_icon"]
-[ext_resource type="Texture2D" uid="uid://du16c3v4084b7" path="res://addons/windows_NT_theme/star.png" id="30_star_icon"]
-[ext_resource type="Texture2D" uid="uid://c0w6bptqkt5il" path="res://addons/windows_NT_theme/opened_folder.png" id="31_opened_folder"]
-[ext_resource type="Texture2D" uid="uid://bsi2v501kfxn0" path="res://addons/windows_NT_theme/quick_load.png" id="32_quick_load"]
-[ext_resource type="Texture2D" uid="uid://bgj8d46f4jj7u" path="res://addons/windows_NT_theme/search.png" id="33_search_icon"]
-[ext_resource type="Texture2D" uid="uid://didnsmslfwwsi" path="res://addons/windows_NT_theme/paint.png" id="34_paint_icon"]
-[ext_resource type="Texture2D" uid="uid://bmpkh2jjobt8l" path="res://addons/windows_NT_theme/distraction_free_mode.png" id="35_distraction_free_icon"]
-[ext_resource type="Texture2D" uid="uid://c16h7re7n3rg5" path="res://addons/windows_NT_theme/remove.png" id="36_remove_icon"]
-[ext_resource type="Texture2D" uid="uid://mstxut21breo" path="res://addons/windows_NT_theme/notification.png" id="37_notification_icon"]
-[ext_resource type="Texture2D" uid="uid://bm55hvyum3i18" path="res://addons/windows_NT_theme/notification_disabled.png" id="38_notification_disabled_icon"]
-[ext_resource type="Texture2D" uid="uid://ocyjf0nb5i6q" path="res://addons/windows_NT_theme/close_editor.png" id="39_close_editor_icon"]
-[ext_resource type="Texture2D" uid="uid://cs41bgjxf00iy" path="res://addons/windows_NT_theme/make_floating.png" id="40_make_floating_icon"]
-[ext_resource type="Texture2D" uid="uid://cyifm7ewaoch7" path="res://addons/windows_NT_theme/lock.png" id="41_lock_icon"]
-[ext_resource type="Texture2D" uid="uid://ql8c5jpjsa6q" path="res://addons/windows_NT_theme/node_warning.png" id="42_node_warning_icon"]
-[ext_resource type="Texture2D" uid="uid://ujlenc5a3aro" path="res://addons/windows_NT_theme/timer.png" id="43_timer_icon"]
-[ext_resource type="Texture2D" uid="uid://b4m50s7iwxkr6" path="res://addons/windows_NT_theme/window.png" id="44_window_icon"]
-[ext_resource type="Texture2D" uid="uid://c1v60hvrf2dhc" path="res://addons/windows_NT_theme/audio_stream_player.png" id="45_audio_stream_player_icon"]
-[ext_resource type="Texture2D" uid="uid://crb2rqd3d3ghw" path="res://addons/windows_NT_theme/sort.png" id="46_sort_icon"]
-[ext_resource type="Texture2D" uid="uid://bd6vm2ku3hq20" path="res://addons/windows_NT_theme/instance.png" id="47_instance_icon"]
-[ext_resource type="Texture2D" uid="uid://csxyspv4dqr0i" path="res://addons/windows_NT_theme/accept_dialog.png" id="48_accept_dialog_icon"]
-[ext_resource type="Texture2D" uid="uid://5dvdy3nsva4c" path="res://addons/windows_NT_theme/confirmation_dialog.png" id="49_confirmation_dialog_icon"]
-[ext_resource type="Texture2D" uid="uid://bu2gp8rp7altu" path="res://addons/windows_NT_theme/file_dialog.png" id="50_file_dialog_icon"]
-[ext_resource type="Texture2D" uid="uid://btoe83bta3xbo" path="res://addons/windows_NT_theme/play.png" id="51_play_icon"]
-[ext_resource type="Texture2D" uid="uid://ciw18wugtl08h" path="res://addons/windows_NT_theme/pause.png" id="52_pause_icon"]
-[ext_resource type="Texture2D" uid="uid://4rp40ng57xpq" path="res://addons/windows_NT_theme/stop.png" id="53_stop_icon"]
-[ext_resource type="Texture2D" uid="uid://bt35l2eds35w6" path="res://addons/windows_NT_theme/game.png" id="54_game_icon"]
-[ext_resource type="Texture2D" uid="uid://c3xfvxbwfm8p6" path="res://addons/windows_NT_theme/script.png" id="55_script_icon"]
-[ext_resource type="Texture2D" uid="uid://mudt6tks010r" path="res://addons/windows_NT_theme/folder_create.png" id="56_folder_create_icon"]
-[ext_resource type="Texture2D" uid="uid://codkbulcyokcu" path="res://addons/windows_NT_theme/folder_browse.png" id="57_folder_browse_icon"]
-[ext_resource type="Texture2D" uid="uid://3te3dfhb4yb6" path="res://addons/windows_NT_theme/folder.png" id="58_folder_big_thumb_icon"]
-[ext_resource type="Texture2D" uid="uid://5k21wdt2v0ve" path="res://addons/windows_NT_theme/redo.png" id="59_redo_icon"]
-[ext_resource type="Texture2D" uid="uid://deqjd4euanb2g" path="res://addons/windows_NT_theme/undo_redo.png" id="60_undo_redo_icon"]
-[ext_resource type="Texture2D" uid="uid://bthfcvcyc57tb" path="res://addons/windows_NT_theme/script_create.png" id="61_script_create_icon"]
-[ext_resource type="Texture2D" uid="uid://bvntsvvmwvmgs" path="res://addons/windows_NT_theme/script_extend.png" id="62_script_extend_icon"]
-[ext_resource type="Texture2D" uid="uid://c7lr1q2b73cel" path="res://addons/windows_NT_theme/script_remove.png" id="63_script_remove_icon"]
-[ext_resource type="Texture2D" uid="uid://b7gg5aiw168k7" path="res://addons/windows_NT_theme/asset_store.png" id="64_asset_store_icon"]
-[ext_resource type="Texture2D" uid="uid://bm3g2encv51yi" path="res://addons/windows_NT_theme/2D.png" id="65_2D_icon"]
-[ext_resource type="Texture2D" uid="uid://dcrvcx1hb7jcg" path="res://addons/windows_NT_theme/3D.png" id="66_3D_icon"]
-[ext_resource type="Texture2D" uid="uid://by3fjbpe8f7ae" path="res://addons/windows_NT_theme/font_file.png" id="67_font_file_icon"]
-[ext_resource type="Texture2D" uid="uid://cc5n441pm235b" path="res://addons/windows_NT_theme/help_search.png" id="68_help_search_icon"]
-[ext_resource type="Texture2D" uid="uid://coa4q18cpjkcn" path="res://addons/windows_NT_theme/help.png" id="69_help_icon"]
-[ext_resource type="Texture2D" uid="uid://cldm70cofxk0o" path="res://addons/windows_NT_theme/pin.png" id="70_pin_icon"]
-[ext_resource type="Texture2D" uid="uid://cwgw1bj3tln1i" path="res://addons/windows_NT_theme/tools.png" id="71_tools_icon"]
-[ext_resource type="Texture2D" uid="uid://b3ej53jke5gs" path="res://addons/windows_NT_theme/gui_tab_menu.png" id="72_gui_tab_menu_icon"]
-[ext_resource type="Texture2D" uid="uid://pnnxvnhxpk5a" path="res://addons/windows_NT_theme/action_paste.png" id="73_action_paste_icon"]
-[ext_resource type="Texture2D" uid="uid://b1ebwo1p0hm7t" path="res://addons/windows_NT_theme/debug_step.png" id="74_debug_step_icon"]
-[ext_resource type="Texture2D" uid="uid://ddmbjpohfgyy1" path="res://addons/windows_NT_theme/debug_next.png" id="75_debug_next_icon"]
-[ext_resource type="Texture2D" uid="uid://b1lqjprppnn87" path="res://addons/windows_NT_theme/debug_out.png" id="76_debug_out_icon"]
-[ext_resource type="Texture2D" uid="uid://h8pklm0pmu40" path="res://addons/windows_NT_theme/node_info.png" id="77_node_info_icon"]
-[ext_resource type="Texture2D" uid="uid://c3ddssd04qf5x" path="res://addons/windows_NT_theme/reload.png" id="78_reload_icon"]
-[ext_resource type="Texture2D" uid="uid://dt73lb36wbxg1" path="res://addons/windows_NT_theme/history.png" id="79_history_icon"]
-[ext_resource type="Texture2D" uid="uid://bjtrkhmw1otea" path="res://addons/windows_NT_theme/file_browse.png" id="80_file_browse_icon"]
-[ext_resource type="Texture2D" uid="uid://c2nkjnc30cjmu" path="res://addons/windows_NT_theme/audio_mute.png" id="81_audio_mute_icon"]
-[ext_resource type="Texture2D" uid="uid://csylkpy5ymydt" path="res://addons/windows_NT_theme/debug_skip_breakpoints_off.png" id="82_debug_skip_breakpoints_off_icon"]
-[ext_resource type="Texture2D" uid="uid://b3vy3jr1lg5lt" path="res://addons/windows_NT_theme/debug_skip_breakpoints_on.png" id="83_debug_skip_breakpoints_on_icon"]
-[ext_resource type="Texture2D" uid="uid://dt56c5hh06b6j" path="res://addons/windows_NT_theme/camera.png" id="84_camera_icon"]
-[ext_resource type="Texture2D" uid="uid://c0727s26b3mel" path="res://addons/windows_NT_theme/preview_sun.png" id="85_preview_sun_icon"]
-[ext_resource type="Texture2D" uid="uid://cburlmi0te4ct" path="res://addons/windows_NT_theme/mouse.png" id="86_mouse_icon"]
-[ext_resource type="Texture2D" uid="uid://bxxiseb6omrp6" path="res://addons/windows_NT_theme/keyboard.png" id="87_keyboard_icon"]
-[ext_resource type="Texture2D" uid="uid://0r4flbugmwot" path="res://addons/windows_NT_theme/joy_axis.png" id="88_joy_axis_icon"]
-[ext_resource type="Texture2D" uid="uid://dkdf74tdf85dj" path="res://addons/windows_NT_theme/joy_button.png" id="89_joy_button_icon"]
-[ext_resource type="Texture2D" uid="uid://c7ughi18ftj8i" path="res://addons/windows_NT_theme/ruler.png" id="90_ruler_icon"]
-[ext_resource type="Texture2D" uid="uid://cee6opat05tjt" path="res://addons/windows_NT_theme/terminal.png" id="91_terminal_icon"]
-[ext_resource type="Texture2D" uid="uid://dmsue15g7ihaw" path="res://addons/windows_NT_theme/duplicate.png" id="92_duplicate_icon"]
-[ext_resource type="Texture2D" uid="uid://cud0c5xgoil4m" path="res://addons/windows_NT_theme/action_copy.png" id="93_action_copy_icon"]
-[ext_resource type="Texture2D" uid="uid://bx61447xxag53" path="res://addons/windows_NT_theme/play_scene.png" id="94_play_scene_icon"]
-[ext_resource type="Texture2D" uid="uid://b4x0rwjqrb201" path="res://addons/windows_NT_theme/close_scene.png" id="95_close_scene_icon"]
-[ext_resource type="Texture2D" uid="uid://b0ynw86hofnkb" path="res://addons/windows_NT_theme/packed_scene.png" id="96_packed_scene_icon"]
-[ext_resource type="Texture2D" uid="uid://blsoq2i6ewje7" path="res://addons/windows_NT_theme/main_movie_write.png" id="97_main_movie_write_icon"]
-[ext_resource type="Texture2D" uid="uid://ckst328vu4lo4" path="res://addons/windows_NT_theme/play_custom.png" id="98_play_custom_icon"]
-[ext_resource type="Texture2D" uid="uid://b11w6prqkx227" path="res://addons/windows_NT_theme/rename.png" id="99_rename_icon"]
-[ext_resource type="Texture2D" uid="uid://6gw7io3mvilo" path="res://addons/windows_NT_theme/animation_mixer.png" id="100_animation_mixer_icon"]
-[ext_resource type="Texture2D" uid="uid://c4u58lgb02dvw" path="res://addons/windows_NT_theme/animation_player.png" id="101_animation_player_icon"]
-[ext_resource type="Texture2D" uid="uid://gkvp546bba1r" path="res://addons/windows_NT_theme/animation_tree.png" id="102_animation_tree_icon"]
-[ext_resource type="Texture2D" uid="uid://dn0rd2s0nexyw" path="res://addons/windows_NT_theme/arrow_left.png" id="103_arrow_left_icon"]
-[ext_resource type="Texture2D" uid="uid://d3p1bxnwah5ql" path="res://addons/windows_NT_theme/arrow_right.png" id="104_arrow_right_icon"]
-[ext_resource type="Texture2D" uid="uid://8jpxcs2h5faa" path="res://addons/windows_NT_theme/arrow_up.png" id="105_arrow_up_icon"]
-[ext_resource type="Texture2D" uid="uid://grm8vgljdjay" path="res://addons/windows_NT_theme/arrow_down.png" id="106_arrow_down_icon"]
-[ext_resource type="Texture2D" uid="uid://wacys0i7x4r6" path="res://addons/windows_NT_theme/move_up.png" id="107_move_up_icon"]
-[ext_resource type="Texture2D" uid="uid://dfdi052lco1l2" path="res://addons/windows_NT_theme/move_down.png" id="108_move_down_icon"]
-[ext_resource type="Texture2D" uid="uid://ulww4k5yl0hf" path="res://addons/windows_NT_theme/move_left.png" id="109_move_left_icon"]
-[ext_resource type="Texture2D" uid="uid://05nxmbaajxff" path="res://addons/windows_NT_theme/move_right.png" id="110_move_right_icon"]
-[ext_resource type="Texture2D" uid="uid://bbq60ay1fe7rq" path="res://addons/windows_NT_theme/text_file.png" id="111_text_file_icon"]
-[ext_resource type="Texture2D" uid="uid://mdto5qjmfa8c" path="res://addons/windows_NT_theme/back.png" id="112_back_icon"]
-[ext_resource type="Texture2D" uid="uid://dgmw4o0k2i6d1" path="res://addons/windows_NT_theme/forward.png" id="113_forward_icon"]
-[ext_resource type="Texture2D" uid="uid://b3xbiuf4xr7ec" path="res://addons/windows_NT_theme/gd_script.png" id="114_gd_script_icon"]
-[ext_resource type="Texture2D" uid="uid://bngpdy7u5x3j4" path="res://addons/windows_NT_theme/csharp_script.png" id="115_csharp_script_icon"]
+[ext_resource type="FontFile" uid="uid://80f5vdk0lhte" path="res://themes/windows_NT_theme/MS Sans Serif.ttf" id="1_ewhgx"]
+[ext_resource type="Texture2D" uid="uid://c1833rva8bi5u" path="res://themes/windows_NT_theme/Windows_NT_panel1.png" id="2_6pbjp"]
+[ext_resource type="Texture2D" uid="uid://xpia3nv1ivsg" path="res://themes/windows_NT_theme/Windows_NT_panel2.png" id="3_arfj1"]
+[ext_resource type="Texture2D" uid="uid://decstt4wbp31w" path="res://themes/windows_NT_theme/Windows_NT_panel5.png" id="4_q03h8"]
+[ext_resource type="Texture2D" uid="uid://d12ct5xjy8ppl" path="res://themes/windows_NT_theme/Windows_NT_panel11.png" id="5_jk2kt"]
+[ext_resource type="Texture2D" uid="uid://d2x4us7finahw" path="res://themes/windows_NT_theme/Windows_NT_panel6.png" id="5_l7q18"]
+[ext_resource type="Texture2D" uid="uid://b15rexdw7nmn7" path="res://themes/windows_NT_theme/Windows_NT_panel7.png" id="6_c52bi"]
+[ext_resource type="Texture2D" uid="uid://t7wopq302hlj" path="res://themes/windows_NT_theme/check_disabled.png" id="6_mkec4"]
+[ext_resource type="Texture2D" uid="uid://f25tislcse3m" path="res://themes/windows_NT_theme/Windows_NT_panel10.png" id="6_rxq7s"]
+[ext_resource type="Texture2D" uid="uid://xeuh2k457n21" path="res://themes/windows_NT_theme/radio_checked.png" id="7_1f4vn"]
+[ext_resource type="Texture2D" uid="uid://drtyqsu3p4y1j" path="res://themes/windows_NT_theme/Windows_NT_panel8.png" id="7_4u7av"]
+[ext_resource type="Texture2D" uid="uid://c1km5n07p5t7v" path="res://themes/windows_NT_theme/radio_checked_disabled.png" id="8_l5p1p"]
+[ext_resource type="Texture2D" uid="uid://c7m07tr4c0ajt" path="res://themes/windows_NT_theme/Windows_NT_panel9.png" id="8_mg6gf"]
+[ext_resource type="Texture2D" uid="uid://dsfh0rybdwh1s" path="res://themes/windows_NT_theme/unchecked_disabled.png" id="8_n0blh"]
+[ext_resource type="Texture2D" uid="uid://bwms5fmgamnyo" path="res://themes/windows_NT_theme/radio_unchecked.png" id="9_dpehg"]
+[ext_resource type="Texture2D" uid="uid://dxx6bs8aqtahq" path="res://themes/windows_NT_theme/Windows_NT_panel12.png" id="9_xl0vj"]
+[ext_resource type="Texture2D" uid="uid://k7rjuus1d4bq" path="res://themes/windows_NT_theme/radio_unchecked_disabled.png" id="10_74gfq"]
+[ext_resource type="Texture2D" uid="uid://bglwmc1p0g780" path="res://themes/windows_NT_theme/Windows_NT_panel13.png" id="10_omu8u"]
+[ext_resource type="Texture2D" uid="uid://b4ee6b2c23r5y" path="res://themes/windows_NT_theme/menu.png" id="13_40raw"]
+[ext_resource type="Texture2D" uid="uid://bor14ncoefmbi" path="res://themes/windows_NT_theme/minus.png" id="13_sxmyg"]
+[ext_resource type="Texture2D" uid="uid://cqoqid4x5nmkw" path="res://themes/windows_NT_theme/plus.png" id="14_1i4yn"]
+[ext_resource type="Texture2D" uid="uid://daat8crwacal" path="res://themes/windows_NT_theme/tab1.png" id="14_lrd5n"]
+[ext_resource type="Texture2D" uid="uid://7avnfcwnd7yf" path="res://themes/windows_NT_theme/close.png" id="15_fhcp3"]
+[ext_resource type="Texture2D" uid="uid://dfowy3tdax43h" path="res://themes/windows_NT_theme/arrow.png" id="17_0ho7r"]
+[ext_resource type="Texture2D" uid="uid://d3ltxplgcdrom" path="res://themes/windows_NT_theme/close_pressed.png" id="25_axb7h"]
+[ext_resource type="Texture2D" uid="uid://lt168d2iwcl3" path="res://themes/windows_NT_theme/paper_add.png" id="27_paper_add"]
+[ext_resource type="Texture2D" uid="uid://d0sxcdp73tc88" path="res://themes/windows_NT_theme/save.png" id="28_save_icon"]
+[ext_resource type="Texture2D" uid="uid://cty3p37hu3neu" path="res://themes/windows_NT_theme/add.png" id="29_add_icon"]
+[ext_resource type="Texture2D" uid="uid://du16c3v4084b7" path="res://themes/windows_NT_theme/star.png" id="30_star_icon"]
+[ext_resource type="Texture2D" uid="uid://c0w6bptqkt5il" path="res://themes/windows_NT_theme/opened_folder.png" id="31_opened_folder"]
+[ext_resource type="Texture2D" uid="uid://bsi2v501kfxn0" path="res://themes/windows_NT_theme/quick_load.png" id="32_quick_load"]
+[ext_resource type="Texture2D" uid="uid://bgj8d46f4jj7u" path="res://themes/windows_NT_theme/search.png" id="33_search_icon"]
+[ext_resource type="Texture2D" uid="uid://didnsmslfwwsi" path="res://themes/windows_NT_theme/paint.png" id="34_paint_icon"]
+[ext_resource type="Texture2D" uid="uid://bmpkh2jjobt8l" path="res://themes/windows_NT_theme/distraction_free_mode.png" id="35_distraction_free_icon"]
+[ext_resource type="Texture2D" uid="uid://c16h7re7n3rg5" path="res://themes/windows_NT_theme/remove.png" id="36_remove_icon"]
+[ext_resource type="Texture2D" uid="uid://mstxut21breo" path="res://themes/windows_NT_theme/notification.png" id="37_notification_icon"]
+[ext_resource type="Texture2D" uid="uid://bm55hvyum3i18" path="res://themes/windows_NT_theme/notification_disabled.png" id="38_notification_disabled_icon"]
+[ext_resource type="Texture2D" uid="uid://ocyjf0nb5i6q" path="res://themes/windows_NT_theme/close_editor.png" id="39_close_editor_icon"]
+[ext_resource type="Texture2D" uid="uid://cs41bgjxf00iy" path="res://themes/windows_NT_theme/make_floating.png" id="40_make_floating_icon"]
+[ext_resource type="Texture2D" uid="uid://cyifm7ewaoch7" path="res://themes/windows_NT_theme/lock.png" id="41_lock_icon"]
+[ext_resource type="Texture2D" uid="uid://ql8c5jpjsa6q" path="res://themes/windows_NT_theme/node_warning.png" id="42_node_warning_icon"]
+[ext_resource type="Texture2D" uid="uid://ujlenc5a3aro" path="res://themes/windows_NT_theme/timer.png" id="43_timer_icon"]
+[ext_resource type="Texture2D" uid="uid://b4m50s7iwxkr6" path="res://themes/windows_NT_theme/window.png" id="44_window_icon"]
+[ext_resource type="Texture2D" uid="uid://c1v60hvrf2dhc" path="res://themes/windows_NT_theme/audio_stream_player.png" id="45_audio_stream_player_icon"]
+[ext_resource type="Texture2D" uid="uid://crb2rqd3d3ghw" path="res://themes/windows_NT_theme/sort.png" id="46_sort_icon"]
+[ext_resource type="Texture2D" uid="uid://bd6vm2ku3hq20" path="res://themes/windows_NT_theme/instance.png" id="47_instance_icon"]
+[ext_resource type="Texture2D" uid="uid://csxyspv4dqr0i" path="res://themes/windows_NT_theme/accept_dialog.png" id="48_accept_dialog_icon"]
+[ext_resource type="Texture2D" uid="uid://5dvdy3nsva4c" path="res://themes/windows_NT_theme/confirmation_dialog.png" id="49_confirmation_dialog_icon"]
+[ext_resource type="Texture2D" uid="uid://bu2gp8rp7altu" path="res://themes/windows_NT_theme/file_dialog.png" id="50_file_dialog_icon"]
+[ext_resource type="Texture2D" uid="uid://btoe83bta3xbo" path="res://themes/windows_NT_theme/play.png" id="51_play_icon"]
+[ext_resource type="Texture2D" uid="uid://ciw18wugtl08h" path="res://themes/windows_NT_theme/pause.png" id="52_pause_icon"]
+[ext_resource type="Texture2D" uid="uid://4rp40ng57xpq" path="res://themes/windows_NT_theme/stop.png" id="53_stop_icon"]
+[ext_resource type="Texture2D" uid="uid://bt35l2eds35w6" path="res://themes/windows_NT_theme/game.png" id="54_game_icon"]
+[ext_resource type="Texture2D" uid="uid://c3xfvxbwfm8p6" path="res://themes/windows_NT_theme/script.png" id="55_script_icon"]
+[ext_resource type="Texture2D" uid="uid://mudt6tks010r" path="res://themes/windows_NT_theme/folder_create.png" id="56_folder_create_icon"]
+[ext_resource type="Texture2D" uid="uid://codkbulcyokcu" path="res://themes/windows_NT_theme/folder_browse.png" id="57_folder_browse_icon"]
+[ext_resource type="Texture2D" uid="uid://3te3dfhb4yb6" path="res://themes/windows_NT_theme/folder.png" id="58_folder_big_thumb_icon"]
+[ext_resource type="Texture2D" uid="uid://5k21wdt2v0ve" path="res://themes/windows_NT_theme/redo.png" id="59_redo_icon"]
+[ext_resource type="Texture2D" uid="uid://deqjd4euanb2g" path="res://themes/windows_NT_theme/undo_redo.png" id="60_undo_redo_icon"]
+[ext_resource type="Texture2D" uid="uid://bthfcvcyc57tb" path="res://themes/windows_NT_theme/script_create.png" id="61_script_create_icon"]
+[ext_resource type="Texture2D" uid="uid://bvntsvvmwvmgs" path="res://themes/windows_NT_theme/script_extend.png" id="62_script_extend_icon"]
+[ext_resource type="Texture2D" uid="uid://c7lr1q2b73cel" path="res://themes/windows_NT_theme/script_remove.png" id="63_script_remove_icon"]
+[ext_resource type="Texture2D" uid="uid://b7gg5aiw168k7" path="res://themes/windows_NT_theme/asset_store.png" id="64_asset_store_icon"]
+[ext_resource type="Texture2D" uid="uid://bm3g2encv51yi" path="res://themes/windows_NT_theme/2D.png" id="65_2D_icon"]
+[ext_resource type="Texture2D" uid="uid://dcrvcx1hb7jcg" path="res://themes/windows_NT_theme/3D.png" id="66_3D_icon"]
+[ext_resource type="Texture2D" uid="uid://by3fjbpe8f7ae" path="res://themes/windows_NT_theme/font_file.png" id="67_font_file_icon"]
+[ext_resource type="Texture2D" uid="uid://cc5n441pm235b" path="res://themes/windows_NT_theme/help_search.png" id="68_help_search_icon"]
+[ext_resource type="Texture2D" uid="uid://coa4q18cpjkcn" path="res://themes/windows_NT_theme/help.png" id="69_help_icon"]
+[ext_resource type="Texture2D" uid="uid://cldm70cofxk0o" path="res://themes/windows_NT_theme/pin.png" id="70_pin_icon"]
+[ext_resource type="Texture2D" uid="uid://cwgw1bj3tln1i" path="res://themes/windows_NT_theme/tools.png" id="71_tools_icon"]
+[ext_resource type="Texture2D" uid="uid://b3ej53jke5gs" path="res://themes/windows_NT_theme/gui_tab_menu.png" id="72_gui_tab_menu_icon"]
+[ext_resource type="Texture2D" uid="uid://pnnxvnhxpk5a" path="res://themes/windows_NT_theme/action_paste.png" id="73_action_paste_icon"]
+[ext_resource type="Texture2D" uid="uid://b1ebwo1p0hm7t" path="res://themes/windows_NT_theme/debug_step.png" id="74_debug_step_icon"]
+[ext_resource type="Texture2D" uid="uid://ddmbjpohfgyy1" path="res://themes/windows_NT_theme/debug_next.png" id="75_debug_next_icon"]
+[ext_resource type="Texture2D" uid="uid://b1lqjprppnn87" path="res://themes/windows_NT_theme/debug_out.png" id="76_debug_out_icon"]
+[ext_resource type="Texture2D" uid="uid://h8pklm0pmu40" path="res://themes/windows_NT_theme/node_info.png" id="77_node_info_icon"]
+[ext_resource type="Texture2D" uid="uid://c3ddssd04qf5x" path="res://themes/windows_NT_theme/reload.png" id="78_reload_icon"]
+[ext_resource type="Texture2D" uid="uid://dt73lb36wbxg1" path="res://themes/windows_NT_theme/history.png" id="79_history_icon"]
+[ext_resource type="Texture2D" uid="uid://bjtrkhmw1otea" path="res://themes/windows_NT_theme/file_browse.png" id="80_file_browse_icon"]
+[ext_resource type="Texture2D" uid="uid://c2nkjnc30cjmu" path="res://themes/windows_NT_theme/audio_mute.png" id="81_audio_mute_icon"]
+[ext_resource type="Texture2D" uid="uid://csylkpy5ymydt" path="res://themes/windows_NT_theme/debug_skip_breakpoints_off.png" id="82_debug_skip_breakpoints_off_icon"]
+[ext_resource type="Texture2D" uid="uid://b3vy3jr1lg5lt" path="res://themes/windows_NT_theme/debug_skip_breakpoints_on.png" id="83_debug_skip_breakpoints_on_icon"]
+[ext_resource type="Texture2D" uid="uid://dt56c5hh06b6j" path="res://themes/windows_NT_theme/camera.png" id="84_camera_icon"]
+[ext_resource type="Texture2D" uid="uid://c0727s26b3mel" path="res://themes/windows_NT_theme/preview_sun.png" id="85_preview_sun_icon"]
+[ext_resource type="Texture2D" uid="uid://cburlmi0te4ct" path="res://themes/windows_NT_theme/mouse.png" id="86_mouse_icon"]
+[ext_resource type="Texture2D" uid="uid://bxxiseb6omrp6" path="res://themes/windows_NT_theme/keyboard.png" id="87_keyboard_icon"]
+[ext_resource type="Texture2D" uid="uid://0r4flbugmwot" path="res://themes/windows_NT_theme/joy_axis.png" id="88_joy_axis_icon"]
+[ext_resource type="Texture2D" uid="uid://dkdf74tdf85dj" path="res://themes/windows_NT_theme/joy_button.png" id="89_joy_button_icon"]
+[ext_resource type="Texture2D" uid="uid://c7ughi18ftj8i" path="res://themes/windows_NT_theme/ruler.png" id="90_ruler_icon"]
+[ext_resource type="Texture2D" uid="uid://cee6opat05tjt" path="res://themes/windows_NT_theme/terminal.png" id="91_terminal_icon"]
+[ext_resource type="Texture2D" uid="uid://dmsue15g7ihaw" path="res://themes/windows_NT_theme/duplicate.png" id="92_duplicate_icon"]
+[ext_resource type="Texture2D" uid="uid://cud0c5xgoil4m" path="res://themes/windows_NT_theme/action_copy.png" id="93_action_copy_icon"]
+[ext_resource type="Texture2D" uid="uid://bx61447xxag53" path="res://themes/windows_NT_theme/play_scene.png" id="94_play_scene_icon"]
+[ext_resource type="Texture2D" uid="uid://b4x0rwjqrb201" path="res://themes/windows_NT_theme/close_scene.png" id="95_close_scene_icon"]
+[ext_resource type="Texture2D" uid="uid://b0ynw86hofnkb" path="res://themes/windows_NT_theme/packed_scene.png" id="96_packed_scene_icon"]
+[ext_resource type="Texture2D" uid="uid://blsoq2i6ewje7" path="res://themes/windows_NT_theme/main_movie_write.png" id="97_main_movie_write_icon"]
+[ext_resource type="Texture2D" uid="uid://ckst328vu4lo4" path="res://themes/windows_NT_theme/play_custom.png" id="98_play_custom_icon"]
+[ext_resource type="Texture2D" uid="uid://b11w6prqkx227" path="res://themes/windows_NT_theme/rename.png" id="99_rename_icon"]
+[ext_resource type="Texture2D" uid="uid://6gw7io3mvilo" path="res://themes/windows_NT_theme/animation_mixer.png" id="100_animation_mixer_icon"]
+[ext_resource type="Texture2D" uid="uid://c4u58lgb02dvw" path="res://themes/windows_NT_theme/animation_player.png" id="101_animation_player_icon"]
+[ext_resource type="Texture2D" uid="uid://gkvp546bba1r" path="res://themes/windows_NT_theme/animation_tree.png" id="102_animation_tree_icon"]
+[ext_resource type="Texture2D" uid="uid://dn0rd2s0nexyw" path="res://themes/windows_NT_theme/arrow_left.png" id="103_arrow_left_icon"]
+[ext_resource type="Texture2D" uid="uid://d3p1bxnwah5ql" path="res://themes/windows_NT_theme/arrow_right.png" id="104_arrow_right_icon"]
+[ext_resource type="Texture2D" uid="uid://8jpxcs2h5faa" path="res://themes/windows_NT_theme/arrow_up.png" id="105_arrow_up_icon"]
+[ext_resource type="Texture2D" uid="uid://grm8vgljdjay" path="res://themes/windows_NT_theme/arrow_down.png" id="106_arrow_down_icon"]
+[ext_resource type="Texture2D" uid="uid://wacys0i7x4r6" path="res://themes/windows_NT_theme/move_up.png" id="107_move_up_icon"]
+[ext_resource type="Texture2D" uid="uid://dfdi052lco1l2" path="res://themes/windows_NT_theme/move_down.png" id="108_move_down_icon"]
+[ext_resource type="Texture2D" uid="uid://ulww4k5yl0hf" path="res://themes/windows_NT_theme/move_left.png" id="109_move_left_icon"]
+[ext_resource type="Texture2D" uid="uid://05nxmbaajxff" path="res://themes/windows_NT_theme/move_right.png" id="110_move_right_icon"]
+[ext_resource type="Texture2D" uid="uid://bbq60ay1fe7rq" path="res://themes/windows_NT_theme/text_file.png" id="111_text_file_icon"]
+[ext_resource type="Texture2D" uid="uid://mdto5qjmfa8c" path="res://themes/windows_NT_theme/back.png" id="112_back_icon"]
+[ext_resource type="Texture2D" uid="uid://dgmw4o0k2i6d1" path="res://themes/windows_NT_theme/forward.png" id="113_forward_icon"]
+[ext_resource type="Texture2D" uid="uid://b3xbiuf4xr7ec" path="res://themes/windows_NT_theme/gd_script.png" id="114_gd_script_icon"]
+[ext_resource type="Texture2D" uid="uid://bngpdy7u5x3j4" path="res://themes/windows_NT_theme/csharp_script.png" id="115_csharp_script_icon"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2u2g"]
 texture = ExtResource("2_6pbjp")
@@ -671,7 +671,7 @@ texture_margin_bottom = 6.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[sub_resource type="Image" id="Image_ln1ci"]
+[sub_resource type="Image" id="Image_bkku7"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 78, 254, 255, 254, 136, 254, 255, 254, 173, 254, 255, 254, 173, 254, 255, 254, 135, 252, 255, 252, 77, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 21, 255, 255, 255, 144, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 143, 255, 255, 255, 20, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 144, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 236, 237, 236, 195, 122, 123, 122, 224, 133, 134, 133, 221, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 143, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 78, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 236, 237, 236, 195, 112, 113, 112, 227, 92, 92, 92, 233, 125, 126, 125, 223, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 252, 255, 252, 76, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 136, 254, 255, 254, 191, 254, 255, 254, 191, 236, 237, 236, 195, 112, 113, 112, 227, 92, 92, 92, 233, 115, 116, 115, 226, 240, 241, 240, 194, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 133, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 173, 254, 255, 254, 191, 254, 255, 254, 191, 122, 122, 122, 224, 92, 92, 92, 233, 115, 116, 115, 226, 240, 241, 240, 194, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 173, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 173, 254, 255, 254, 191, 254, 255, 254, 191, 123, 124, 123, 224, 92, 92, 92, 233, 116, 117, 116, 226, 238, 240, 238, 194, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 172, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 135, 254, 255, 254, 191, 254, 255, 254, 191, 237, 238, 237, 195, 115, 115, 115, 226, 92, 92, 92, 233, 115, 116, 115, 226, 237, 238, 237, 195, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 133, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 252, 255, 252, 77, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 237, 238, 237, 195, 115, 115, 115, 226, 92, 92, 92, 233, 125, 125, 125, 223, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 75, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 143, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 237, 238, 237, 195, 125, 125, 125, 223, 134, 134, 134, 220, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 142, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 20, 254, 255, 254, 143, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 142, 255, 255, 255, 19, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 252, 255, 252, 76, 255, 255, 255, 133, 254, 255, 254, 173, 254, 255, 254, 172, 255, 255, 255, 133, 255, 255, 255, 75, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -681,9 +681,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_tbcmm"]
-image = SubResource("Image_ln1ci")
+image = SubResource("Image_bkku7")
 
-[sub_resource type="Image" id="Image_mmx4e"]
+[sub_resource type="Image" id="Image_605mf"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 104, 254, 255, 254, 181, 254, 255, 254, 231, 254, 255, 254, 231, 254, 255, 254, 180, 255, 255, 255, 102, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 27, 254, 255, 254, 193, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 191, 255, 255, 255, 26, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 193, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 233, 234, 233, 255, 77, 77, 77, 255, 93, 93, 93, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 191, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 104, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 233, 234, 233, 255, 61, 61, 61, 255, 26, 26, 26, 255, 81, 81, 81, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 255, 255, 255, 101, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 181, 254, 255, 254, 255, 254, 255, 254, 255, 233, 234, 233, 255, 61, 61, 61, 255, 26, 26, 26, 255, 67, 67, 67, 255, 237, 238, 237, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 178, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 231, 254, 255, 254, 255, 254, 255, 254, 255, 75, 75, 75, 255, 26, 26, 26, 255, 67, 67, 67, 255, 237, 238, 237, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 231, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 231, 254, 255, 254, 255, 254, 255, 254, 255, 78, 78, 78, 255, 26, 26, 26, 255, 66, 66, 66, 255, 236, 237, 236, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 230, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 180, 254, 255, 254, 255, 254, 255, 254, 255, 235, 236, 235, 255, 64, 64, 64, 255, 26, 26, 26, 255, 65, 65, 65, 255, 235, 236, 235, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 178, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 102, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 235, 236, 235, 255, 64, 64, 64, 255, 26, 26, 26, 255, 79, 79, 79, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 255, 255, 255, 100, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 191, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 235, 236, 235, 255, 79, 79, 79, 255, 96, 96, 96, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 189, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 26, 254, 255, 254, 191, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 189, 255, 255, 255, 25, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 101, 254, 255, 254, 178, 254, 255, 254, 231, 254, 255, 254, 230, 254, 255, 254, 178, 255, 255, 255, 100, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -693,9 +693,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_3xl3e"]
-image = SubResource("Image_mmx4e")
+image = SubResource("Image_605mf")
 
-[sub_resource type="Image" id="Image_exppu"]
+[sub_resource type="Image" id="Image_5twp8"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 211, 211, 211, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -705,9 +705,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_nf31y"]
-image = SubResource("Image_exppu")
+image = SubResource("Image_5twp8")
 
-[sub_resource type="Image" id="Image_stqdn"]
+[sub_resource type="Image" id="Image_l8rhd"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 78, 254, 255, 254, 136, 254, 255, 254, 173, 254, 255, 254, 173, 254, 255, 254, 135, 252, 255, 252, 77, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 21, 255, 255, 255, 144, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 143, 255, 255, 255, 20, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 144, 254, 255, 254, 191, 254, 255, 254, 191, 130, 130, 130, 221, 123, 124, 123, 224, 237, 238, 237, 195, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 143, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 78, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 122, 123, 122, 224, 92, 92, 92, 233, 115, 115, 115, 226, 237, 238, 237, 195, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 252, 255, 252, 76, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 136, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 237, 238, 237, 195, 115, 115, 115, 226, 92, 92, 92, 233, 115, 115, 115, 226, 237, 238, 237, 195, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 133, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 173, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 237, 238, 237, 195, 115, 115, 115, 226, 92, 92, 92, 233, 125, 125, 125, 223, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 173, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 173, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 236, 237, 236, 195, 115, 115, 115, 226, 92, 92, 92, 233, 123, 125, 123, 223, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 172, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 135, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 234, 236, 234, 195, 114, 114, 114, 226, 92, 92, 92, 233, 116, 117, 116, 226, 238, 240, 238, 194, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 133, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 252, 255, 252, 77, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 122, 122, 122, 224, 92, 92, 92, 233, 116, 117, 116, 226, 238, 240, 238, 194, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 255, 255, 255, 75, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 143, 254, 255, 254, 191, 254, 255, 254, 191, 132, 133, 132, 221, 123, 125, 123, 223, 238, 240, 238, 194, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 142, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 20, 254, 255, 254, 143, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 191, 254, 255, 254, 142, 255, 255, 255, 19, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 252, 255, 252, 76, 255, 255, 255, 133, 254, 255, 254, 173, 254, 255, 254, 172, 255, 255, 255, 133, 255, 255, 255, 75, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -717,9 +717,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_mjea1"]
-image = SubResource("Image_stqdn")
+image = SubResource("Image_l8rhd")
 
-[sub_resource type="Image" id="Image_1vq43"]
+[sub_resource type="Image" id="Image_iifvp"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 104, 254, 255, 254, 181, 254, 255, 254, 231, 254, 255, 254, 231, 254, 255, 254, 180, 255, 255, 255, 102, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 27, 254, 255, 254, 193, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 191, 255, 255, 255, 26, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 193, 254, 255, 254, 255, 254, 255, 254, 255, 88, 88, 88, 255, 78, 78, 78, 255, 234, 235, 234, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 191, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 104, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 77, 77, 77, 255, 26, 26, 26, 255, 63, 63, 63, 255, 234, 235, 234, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 255, 255, 255, 101, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 181, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 234, 235, 234, 255, 63, 63, 63, 255, 26, 26, 26, 255, 63, 63, 63, 255, 234, 235, 234, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 178, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 231, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 234, 235, 234, 255, 63, 63, 63, 255, 26, 26, 26, 255, 79, 79, 79, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 231, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 231, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 233, 234, 233, 255, 63, 63, 63, 255, 26, 26, 26, 255, 80, 80, 80, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 230, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 254, 255, 254, 180, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 232, 233, 232, 255, 62, 62, 62, 255, 26, 26, 26, 255, 66, 66, 66, 255, 236, 237, 236, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 178, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 102, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 74, 74, 74, 255, 26, 26, 26, 255, 66, 66, 66, 255, 236, 237, 236, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 255, 255, 255, 100, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 254, 255, 254, 191, 254, 255, 254, 255, 254, 255, 254, 255, 91, 91, 91, 255, 80, 80, 80, 255, 236, 237, 236, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 189, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 26, 254, 255, 254, 191, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 255, 254, 189, 255, 255, 255, 25, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 2, 255, 255, 255, 101, 254, 255, 254, 178, 254, 255, 254, 231, 254, 255, 254, 230, 254, 255, 254, 178, 255, 255, 255, 100, 255, 255, 255, 2, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -729,7 +729,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_jt5b5"]
-image = SubResource("Image_1vq43")
+image = SubResource("Image_iifvp")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13ygn"]
 
@@ -994,13 +994,37 @@ ColorPickerButton/styles/hover = SubResource("StyleBoxTexture_o20hq")
 ColorPickerButton/styles/normal = SubResource("StyleBoxTexture_hk7m0")
 ColorPickerButton/styles/pressed = SubResource("StyleBoxTexture_1y6qy")
 ColorPresetButton/styles/preset_fg = SubResource("StyleBoxTexture_qvo4i")
+EditorIcons/icons/2D = ExtResource("65_2D_icon")
+EditorIcons/icons/3D = ExtResource("66_3D_icon")
 EditorIcons/icons/AcceptDialog = ExtResource("48_accept_dialog_icon")
+EditorIcons/icons/ActionCopy = ExtResource("93_action_copy_icon")
+EditorIcons/icons/ActionPaste = ExtResource("73_action_paste_icon")
 EditorIcons/icons/Add = ExtResource("29_add_icon")
+EditorIcons/icons/AnimationMixer = ExtResource("100_animation_mixer_icon")
+EditorIcons/icons/AnimationPlayer = ExtResource("101_animation_player_icon")
+EditorIcons/icons/AnimationTree = ExtResource("102_animation_tree_icon")
+EditorIcons/icons/ArrowDown = ExtResource("106_arrow_down_icon")
+EditorIcons/icons/ArrowLeft = ExtResource("103_arrow_left_icon")
+EditorIcons/icons/ArrowRight = ExtResource("104_arrow_right_icon")
+EditorIcons/icons/ArrowUp = ExtResource("105_arrow_up_icon")
+EditorIcons/icons/AssetStore = ExtResource("64_asset_store_icon")
+EditorIcons/icons/AudioMute = ExtResource("81_audio_mute_icon")
 EditorIcons/icons/AudioStreamPlayer = ExtResource("45_audio_stream_player_icon")
+EditorIcons/icons/Back = ExtResource("112_back_icon")
+EditorIcons/icons/CSharpScript = ExtResource("115_csharp_script_icon")
+EditorIcons/icons/Camera = ExtResource("84_camera_icon")
 EditorIcons/icons/Close = ExtResource("39_close_editor_icon")
+EditorIcons/icons/CloseScene = ExtResource("95_close_scene_icon")
 EditorIcons/icons/ConfirmationDialog = ExtResource("49_confirmation_dialog_icon")
+EditorIcons/icons/DebugNext = ExtResource("75_debug_next_icon")
+EditorIcons/icons/DebugOut = ExtResource("76_debug_out_icon")
+EditorIcons/icons/DebugSkipBreakpointsOff = ExtResource("82_debug_skip_breakpoints_off_icon")
+EditorIcons/icons/DebugSkipBreakpointsOn = ExtResource("83_debug_skip_breakpoints_on_icon")
+EditorIcons/icons/DebugStep = ExtResource("74_debug_step_icon")
 EditorIcons/icons/DistractionFree = ExtResource("35_distraction_free_icon")
+EditorIcons/icons/Duplicate = ExtResource("92_duplicate_icon")
 EditorIcons/icons/Favorites = ExtResource("30_star_icon")
+EditorIcons/icons/FileBrowse = ExtResource("80_file_browse_icon")
 EditorIcons/icons/FileDialog = ExtResource("50_file_dialog_icon")
 EditorIcons/icons/Folder = ExtResource("58_folder_big_thumb_icon")
 EditorIcons/icons/FolderBigThumb = ExtResource("58_folder_big_thumb_icon")
@@ -1008,85 +1032,61 @@ EditorIcons/icons/FolderBrowse = ExtResource("57_folder_browse_icon")
 EditorIcons/icons/FolderCreate = ExtResource("56_folder_create_icon")
 EditorIcons/icons/FolderLarge = ExtResource("58_folder_big_thumb_icon")
 EditorIcons/icons/FolderMedium = ExtResource("58_folder_big_thumb_icon")
+EditorIcons/icons/FontFile = ExtResource("67_font_file_icon")
+EditorIcons/icons/Forward = ExtResource("113_forward_icon")
+EditorIcons/icons/GDScript = ExtResource("114_gd_script_icon")
 EditorIcons/icons/Game = ExtResource("54_game_icon")
+EditorIcons/icons/GuiTabMenuHl = ExtResource("72_gui_tab_menu_icon")
+EditorIcons/icons/Help = ExtResource("69_help_icon")
+EditorIcons/icons/HelpSearch = ExtResource("68_help_search_icon")
+EditorIcons/icons/History = ExtResource("79_history_icon")
 EditorIcons/icons/Instance = ExtResource("47_instance_icon")
+EditorIcons/icons/JoyAxis = ExtResource("88_joy_axis_icon")
+EditorIcons/icons/JoyButton = ExtResource("89_joy_button_icon")
+EditorIcons/icons/Keyboard = ExtResource("87_keyboard_icon")
 EditorIcons/icons/Load = ExtResource("31_opened_folder")
 EditorIcons/icons/LoadQuick = ExtResource("32_quick_load")
 EditorIcons/icons/Lock = ExtResource("41_lock_icon")
-EditorIcons/icons/MakeFloating = ExtResource("40_make_floating_icon")
-EditorIcons/icons/New = ExtResource("27_paper_add")
-EditorIcons/icons/NodeWarning = ExtResource("42_node_warning_icon")
-EditorIcons/icons/Notification = ExtResource("37_notification_icon")
-EditorIcons/icons/NotificationDisabled = ExtResource("38_notification_disabled_icon")
-EditorIcons/icons/Paint = ExtResource("34_paint_icon")
-EditorIcons/icons/Pause = ExtResource("52_pause_icon")
-EditorIcons/icons/Play = ExtResource("51_play_icon")
-EditorIcons/icons/Redo = ExtResource("59_redo_icon")
-EditorIcons/icons/Remove = ExtResource("36_remove_icon")
-EditorIcons/icons/Save = ExtResource("28_save_icon")
-EditorIcons/icons/Script = ExtResource("55_script_icon")
-EditorIcons/icons/Search = ExtResource("33_search_icon")
-EditorIcons/icons/Sort = ExtResource("46_sort_icon")
-EditorIcons/icons/Stop = ExtResource("53_stop_icon")
-EditorIcons/icons/Timer = ExtResource("43_timer_icon")
-EditorIcons/icons/UndoRedo = ExtResource("60_undo_redo_icon")
-EditorIcons/icons/Window = ExtResource("44_window_icon")
-EditorIcons/icons/ScriptCreate = ExtResource("61_script_create_icon")
-EditorIcons/icons/ScriptExtend = ExtResource("62_script_extend_icon")
-EditorIcons/icons/ScriptRemove = ExtResource("63_script_remove_icon")
-EditorIcons/icons/AssetStore = ExtResource("64_asset_store_icon")
-EditorIcons/icons/2D = ExtResource("65_2D_icon")
-EditorIcons/icons/3D = ExtResource("66_3D_icon")
-EditorIcons/icons/FontFile = ExtResource("67_font_file_icon")
-EditorIcons/icons/HelpSearch = ExtResource("68_help_search_icon")
-EditorIcons/icons/Help = ExtResource("69_help_icon")
-EditorIcons/icons/Pin = ExtResource("70_pin_icon")
-EditorIcons/icons/PinPressed = ExtResource("70_pin_icon")
-EditorIcons/icons/Tools = ExtResource("71_tools_icon")
-EditorIcons/icons/GuiTabMenuHl = ExtResource("72_gui_tab_menu_icon")
-EditorIcons/icons/ActionPaste = ExtResource("73_action_paste_icon")
-EditorIcons/icons/DebugStep = ExtResource("74_debug_step_icon")
-EditorIcons/icons/DebugNext = ExtResource("75_debug_next_icon")
-EditorIcons/icons/DebugOut = ExtResource("76_debug_out_icon")
-EditorIcons/icons/NodeInfo = ExtResource("77_node_info_icon")
-EditorIcons/icons/Reload = ExtResource("78_reload_icon")
-EditorIcons/icons/History = ExtResource("79_history_icon")
-EditorIcons/icons/FileBrowse = ExtResource("80_file_browse_icon")
-EditorIcons/icons/AudioMute = ExtResource("81_audio_mute_icon")
-EditorIcons/icons/DebugSkipBreakpointsOff = ExtResource("82_debug_skip_breakpoints_off_icon")
-EditorIcons/icons/DebugSkipBreakpointsOn = ExtResource("83_debug_skip_breakpoints_on_icon")
-EditorIcons/icons/Camera = ExtResource("84_camera_icon")
-EditorIcons/icons/PreviewSun = ExtResource("85_preview_sun_icon")
-EditorIcons/icons/Mouse = ExtResource("86_mouse_icon")
-EditorIcons/icons/Keyboard = ExtResource("87_keyboard_icon")
-EditorIcons/icons/JoyAxis = ExtResource("88_joy_axis_icon")
-EditorIcons/icons/JoyButton = ExtResource("89_joy_button_icon")
-EditorIcons/icons/Ruler = ExtResource("90_ruler_icon")
-EditorIcons/icons/Terminal = ExtResource("91_terminal_icon")
-EditorIcons/icons/Duplicate = ExtResource("92_duplicate_icon")
-EditorIcons/icons/ActionCopy = ExtResource("93_action_copy_icon")
-EditorIcons/icons/PlayScene = ExtResource("94_play_scene_icon")
-EditorIcons/icons/CloseScene = ExtResource("95_close_scene_icon")
-EditorIcons/icons/PackedScene = ExtResource("96_packed_scene_icon")
 EditorIcons/icons/MainMovieWrite = ExtResource("97_main_movie_write_icon")
-EditorIcons/icons/PlayCustom = ExtResource("98_play_custom_icon")
-EditorIcons/icons/Rename = ExtResource("99_rename_icon")
-EditorIcons/icons/AnimationMixer = ExtResource("100_animation_mixer_icon")
-EditorIcons/icons/AnimationPlayer = ExtResource("101_animation_player_icon")
-EditorIcons/icons/AnimationTree = ExtResource("102_animation_tree_icon")
-EditorIcons/icons/ArrowLeft = ExtResource("103_arrow_left_icon")
-EditorIcons/icons/ArrowRight = ExtResource("104_arrow_right_icon")
-EditorIcons/icons/ArrowUp = ExtResource("105_arrow_up_icon")
-EditorIcons/icons/ArrowDown = ExtResource("106_arrow_down_icon")
-EditorIcons/icons/MoveUp = ExtResource("107_move_up_icon")
+EditorIcons/icons/MakeFloating = ExtResource("40_make_floating_icon")
+EditorIcons/icons/Mouse = ExtResource("86_mouse_icon")
 EditorIcons/icons/MoveDown = ExtResource("108_move_down_icon")
 EditorIcons/icons/MoveLeft = ExtResource("109_move_left_icon")
 EditorIcons/icons/MoveRight = ExtResource("110_move_right_icon")
+EditorIcons/icons/MoveUp = ExtResource("107_move_up_icon")
+EditorIcons/icons/New = ExtResource("27_paper_add")
+EditorIcons/icons/NodeInfo = ExtResource("77_node_info_icon")
+EditorIcons/icons/NodeWarning = ExtResource("42_node_warning_icon")
+EditorIcons/icons/Notification = ExtResource("37_notification_icon")
+EditorIcons/icons/NotificationDisabled = ExtResource("38_notification_disabled_icon")
+EditorIcons/icons/PackedScene = ExtResource("96_packed_scene_icon")
+EditorIcons/icons/Paint = ExtResource("34_paint_icon")
+EditorIcons/icons/Pause = ExtResource("52_pause_icon")
+EditorIcons/icons/Pin = ExtResource("70_pin_icon")
+EditorIcons/icons/PinPressed = ExtResource("70_pin_icon")
+EditorIcons/icons/Play = ExtResource("51_play_icon")
+EditorIcons/icons/PlayCustom = ExtResource("98_play_custom_icon")
+EditorIcons/icons/PlayScene = ExtResource("94_play_scene_icon")
+EditorIcons/icons/PreviewSun = ExtResource("85_preview_sun_icon")
+EditorIcons/icons/Redo = ExtResource("59_redo_icon")
+EditorIcons/icons/Reload = ExtResource("78_reload_icon")
+EditorIcons/icons/Remove = ExtResource("36_remove_icon")
+EditorIcons/icons/Rename = ExtResource("99_rename_icon")
+EditorIcons/icons/Ruler = ExtResource("90_ruler_icon")
+EditorIcons/icons/Save = ExtResource("28_save_icon")
+EditorIcons/icons/Script = ExtResource("55_script_icon")
+EditorIcons/icons/ScriptCreate = ExtResource("61_script_create_icon")
+EditorIcons/icons/ScriptExtend = ExtResource("62_script_extend_icon")
+EditorIcons/icons/ScriptRemove = ExtResource("63_script_remove_icon")
+EditorIcons/icons/Search = ExtResource("33_search_icon")
+EditorIcons/icons/Sort = ExtResource("46_sort_icon")
+EditorIcons/icons/Stop = ExtResource("53_stop_icon")
+EditorIcons/icons/Terminal = ExtResource("91_terminal_icon")
 EditorIcons/icons/TextFile = ExtResource("111_text_file_icon")
-EditorIcons/icons/Back = ExtResource("112_back_icon")
-EditorIcons/icons/Forward = ExtResource("113_forward_icon")
-EditorIcons/icons/GDScript = ExtResource("114_gd_script_icon")
-EditorIcons/icons/CSharpScript = ExtResource("115_csharp_script_icon")
+EditorIcons/icons/Timer = ExtResource("43_timer_icon")
+EditorIcons/icons/Tools = ExtResource("71_tools_icon")
+EditorIcons/icons/UndoRedo = ExtResource("60_undo_redo_icon")
+EditorIcons/icons/Window = ExtResource("44_window_icon")
 Fonts/fonts/large = ExtResource("1_ewhgx")
 Fonts/fonts/normal = ExtResource("1_ewhgx")
 GraphNode/fonts/title_font = ExtResource("1_ewhgx")

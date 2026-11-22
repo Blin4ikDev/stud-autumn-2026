@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/pixel_planet_shader/example/demo.gd" id="2"]
+[ext_resource type="Shader" path="res://addons/pixel_planet_shader/shaders/pixel_planet.gdshader" id="1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_planet"]
+shader = ExtResource("1")
+shader_parameter/spin = 0.125
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+
+[node name="Planet" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_planet")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Info" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 484.0
+offset_right = 502.0
+offset_bottom = 508.0
+text = ""
