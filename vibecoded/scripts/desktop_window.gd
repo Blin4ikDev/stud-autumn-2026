@@ -62,7 +62,7 @@ func _build_content(_root: Control) -> void:
 func _build_chrome() -> void:
 	_built = true
 	custom_minimum_size = Vector2(560, 320)
-	add_theme_stylebox_override("panel", Win10Theme.window_panel(false))
+	Win10Theme.style(self, "panel", Win10Theme.window_panel(false))
 
 	var layout := VBoxContainer.new()
 	layout.name = "Layout"
@@ -76,7 +76,7 @@ func _build_chrome() -> void:
 	_title_bar.custom_minimum_size = Vector2(0, TITLEBAR_HEIGHT)
 	_title_bar.mouse_filter = Control.MOUSE_FILTER_STOP
 	_title_bar.mouse_default_cursor_shape = Control.CURSOR_MOVE
-	_title_bar.add_theme_stylebox_override("panel", Win10Theme.titlebar())
+	Win10Theme.style(_title_bar, "panel", Win10Theme.titlebar())
 	_title_bar.gui_input.connect(_on_titlebar_input)
 	layout.add_child(_title_bar)
 
@@ -114,7 +114,7 @@ func _build_chrome() -> void:
 	_title_label.clip_text = true
 	_title_label.text = window_title
 	_title_label.add_theme_font_size_override("font_size", 12)
-	_title_label.add_theme_color_override("font_color", Win10Theme.TITLE_TEXT_INACTIVE)
+	Win10Theme.color(_title_label, "font_color", Win10Theme.TITLE_TEXT_INACTIVE)
 	_title_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bar.add_child(_title_label)
 
@@ -133,10 +133,10 @@ func _build_chrome() -> void:
 	var close_button := _make_window_button("\u2715", 11)
 	close_button.name = "CloseButton"
 	close_button.tooltip_text = "Close"
-	close_button.add_theme_stylebox_override("hover", Win10Theme.flat(Win10Theme.CLOSE_HOVER))
-	close_button.add_theme_stylebox_override("pressed", Win10Theme.flat(Win10Theme.CLOSE_PRESSED))
-	close_button.add_theme_color_override("font_hover_color", Color.WHITE)
-	close_button.add_theme_color_override("font_pressed_color", Color.WHITE)
+	Win10Theme.style(close_button, "hover", Win10Theme.flat(Win10Theme.CLOSE_HOVER))
+	Win10Theme.style(close_button, "pressed", Win10Theme.flat(Win10Theme.CLOSE_PRESSED))
+	Win10Theme.color(close_button, "font_hover_color", Color.WHITE)
+	Win10Theme.color(close_button, "font_pressed_color", Color.WHITE)
 	close_button.pressed.connect(request_close)
 	bar.add_child(close_button)
 
@@ -156,9 +156,9 @@ func _make_window_button(glyph: String, font_size: int) -> Button:
 	button.focus_mode = Control.FOCUS_NONE
 	button.custom_minimum_size = Vector2(46, TITLEBAR_HEIGHT)
 	button.add_theme_font_size_override("font_size", font_size)
-	button.add_theme_color_override("font_color", Win10Theme.TITLE_TEXT_INACTIVE)
-	button.add_theme_color_override("font_hover_color", Color.WHITE)
-	button.add_theme_color_override("font_pressed_color", Color.WHITE)
+	Win10Theme.color(button, "font_color", Win10Theme.TITLE_TEXT_INACTIVE)
+	Win10Theme.color(button, "font_hover_color", Color.WHITE)
+	Win10Theme.color(button, "font_pressed_color", Color.WHITE)
 	Win10Theme.apply_flat_button(button)
 	return button
 
@@ -167,10 +167,10 @@ func set_active(active: bool) -> void:
 	if is_active == active:
 		return
 	is_active = active
-	add_theme_stylebox_override("panel", Win10Theme.window_panel(active))
+	Win10Theme.style(self, "panel", Win10Theme.window_panel(active))
 	var color := Win10Theme.TITLE_TEXT if active else Win10Theme.TITLE_TEXT_INACTIVE
 	if is_instance_valid(_title_label):
-		_title_label.add_theme_color_override("font_color", color)
+		Win10Theme.color(_title_label, "font_color", color)
 
 
 func set_maximized(value: bool) -> void:

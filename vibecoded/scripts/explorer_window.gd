@@ -53,7 +53,7 @@ func _build_toolbar() -> Control:
 	var toolbar := PanelContainer.new()
 	toolbar.name = "Toolbar"
 	toolbar.custom_minimum_size = Vector2(0, 42)
-	toolbar.add_theme_stylebox_override("panel", Win10Theme.explorer_toolbar())
+	Win10Theme.style(toolbar, "panel", Win10Theme.explorer_toolbar())
 
 	var bar := HBoxContainer.new()
 	bar.add_theme_constant_override("separation", 2)
@@ -81,7 +81,7 @@ func _build_toolbar() -> Control:
 	address.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	address.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	address.custom_minimum_size = Vector2(0, 28)
-	address.add_theme_stylebox_override("panel", Win10Theme.address_bar())
+	Win10Theme.style(address, "panel", Win10Theme.address_bar())
 	bar.add_child(address)
 
 	_address_label = Label.new()
@@ -95,9 +95,9 @@ func _build_toolbar() -> Control:
 	_search_field.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	_search_field.placeholder_text = "Search"
 	_search_field.add_theme_font_size_override("font_size", 12)
-	_search_field.add_theme_color_override("font_placeholder_color", Color("9a9a9a"))
-	_search_field.add_theme_stylebox_override("normal", Win10Theme.address_bar())
-	_search_field.add_theme_stylebox_override("focus", Win10Theme.flat(Color("1b1b1b"), Win10Theme.ACCENT, 1, 2, 0.0))
+	Win10Theme.color(_search_field, "font_placeholder_color", Color("9a9a9a"))
+	Win10Theme.style(_search_field, "normal", Win10Theme.address_bar())
+	Win10Theme.style(_search_field, "focus", Win10Theme.flat(Color("1b1b1b"), Win10Theme.ACCENT, 1, 2, 0.0))
 	_search_field.text_changed.connect(_on_search_changed)
 	bar.add_child(_search_field)
 
@@ -113,7 +113,7 @@ func _build_body() -> Control:
 	var sidebar := PanelContainer.new()
 	sidebar.name = "Sidebar"
 	sidebar.custom_minimum_size = Vector2(184, 0)
-	sidebar.add_theme_stylebox_override("panel", Win10Theme.explorer_sidebar())
+	Win10Theme.style(sidebar, "panel", Win10Theme.explorer_sidebar())
 	body.add_child(sidebar)
 
 	var nav := VBoxContainer.new()
@@ -123,7 +123,7 @@ func _build_body() -> Control:
 	var header := Label.new()
 	header.text = "Quick access"
 	header.add_theme_font_size_override("font_size", 11)
-	header.add_theme_color_override("font_color", Color("9a9a9a"))
+	Win10Theme.color(header, "font_color", Color("9a9a9a"))
 	header.custom_minimum_size = Vector2(0, 26)
 	header.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	nav.add_child(header)
@@ -140,7 +140,7 @@ func _build_body() -> Control:
 	var content := PanelContainer.new()
 	content.name = "ContentPanel"
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	content.add_theme_stylebox_override("panel", Win10Theme.explorer_background())
+	Win10Theme.style(content, "panel", Win10Theme.explorer_background())
 	body.add_child(content)
 
 	_scroll = ScrollContainer.new()
@@ -164,11 +164,11 @@ func _build_status_bar() -> Control:
 	var status := PanelContainer.new()
 	status.name = "StatusBar"
 	status.custom_minimum_size = Vector2(0, 24)
-	status.add_theme_stylebox_override("panel", Win10Theme.explorer_status())
+	Win10Theme.style(status, "panel", Win10Theme.explorer_status())
 
 	_status_label = Label.new()
 	_status_label.add_theme_font_size_override("font_size", 11)
-	_status_label.add_theme_color_override("font_color", Color("a8a8a8"))
+	Win10Theme.color(_status_label, "font_color", Color("a8a8a8"))
 	status.add_child(_status_label)
 
 	return status
@@ -182,8 +182,8 @@ func _make_tool_button(glyph: String, tip: String, font_size := 15) -> Button:
 	button.focus_mode = Control.FOCUS_NONE
 	button.custom_minimum_size = Vector2(32, 28)
 	button.add_theme_font_size_override("font_size", font_size)
-	button.add_theme_color_override("font_color", Color.WHITE)
-	button.add_theme_color_override("font_disabled_color", Color(1, 1, 1, 0.28))
+	Win10Theme.color(button, "font_color", Color.WHITE)
+	Win10Theme.color(button, "font_disabled_color", Color(1, 1, 1, 0.28))
 	Win10Theme.apply_flat_button(button)
 	return button
 
@@ -291,11 +291,11 @@ func _make_item_button(item: Dictionary) -> Button:
 	button.button_group = _item_group
 	button.tooltip_text = str(item.get("name", ""))
 	button.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	button.add_theme_stylebox_override("normal", Win10Theme.item_normal())
-	button.add_theme_stylebox_override("hover", Win10Theme.item_hover())
-	button.add_theme_stylebox_override("pressed", Win10Theme.item_selected())
-	button.add_theme_stylebox_override("hover_pressed", Win10Theme.item_selected())
-	button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	Win10Theme.style(button, "normal", Win10Theme.item_normal())
+	Win10Theme.style(button, "hover", Win10Theme.item_hover())
+	Win10Theme.style(button, "pressed", Win10Theme.item_selected())
+	Win10Theme.style(button, "hover_pressed", Win10Theme.item_selected())
+	Win10Theme.style(button, "focus", StyleBoxEmpty.new())
 
 	var box := VBoxContainer.new()
 	box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -324,7 +324,7 @@ func _make_item_button(item: Dictionary) -> Button:
 	label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	label.custom_minimum_size = Vector2(88, 30)
 	label.add_theme_font_size_override("font_size", 12)
-	label.add_theme_color_override("font_color", Color("ededed"))
+	Win10Theme.color(label, "font_color", Color("ededed"))
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	box.add_child(label)
 

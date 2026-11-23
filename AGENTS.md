@@ -22,8 +22,10 @@ Supporting scripts:
  - `vibecoded/scripts/explorer_window.gd` (`ExplorerWindow`) — navigation, sidebar, search filter
  - `vibecoded/scripts/win10_theme.gd` (`Win10Theme`) — shared dark styleboxes/helpers
 
-UI style: **Windows 10 dark** from `res://themes/windows_10_dark/theme.tres`.
-Do not modify the vendored theme; override styles in `Win10Theme` or per node.
+UI style: currently the **Windows NT** theme (`res://themes/windows_NT_theme/save1.tres`,
+set on the scene root). The Win10 dark styling lives in `Win10Theme` behind
+`Win10Theme.use_win10_skin` — `false` (default) lets the scene theme drive the
+look, `true` restores the Win10 dark overrides. Do not modify vendored themes.
 
 ## Show API (on the root node)
 ```gdscript

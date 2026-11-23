@@ -1,6 +1,20 @@
 class_name Win10Theme
 extends RefCounted
 
+## When false, the desktop skips all Win10 dark style overrides and lets the
+## scene's own Theme resource drive the look (e.g. themes/windows_NT_theme).
+static var use_win10_skin := false
+
+## Applies a stylebox override only while the Win10 dark skin is active.
+static func style(control: Control, key: String, box: StyleBox) -> void:
+	if use_win10_skin:
+		control.add_theme_stylebox_override(key, box)
+
+## Applies a color override only while the Win10 dark skin is active.
+static func color(control: Control, key: String, value: Color) -> void:
+	if use_win10_skin:
+		control.add_theme_color_override(key, value)
+
 ## Shared Windows 10 (dark) styling used by the desktop, windows and explorer.
 ## Everything here is generated in code so the desktop stays consistent even
 ## when the scene is rebuilt or extended.
@@ -128,6 +142,8 @@ static func address_bar() -> StyleBoxFlat:
 
 
 static func apply_flat_button(button: Button, hover_bg := HOVER, pressed_bg := PRESSED) -> void:
+	if not use_win10_skin:
+		return
 	button.add_theme_stylebox_override("normal", flat(Color(0, 0, 0, 0)))
 	button.add_theme_stylebox_override("hover", flat(hover_bg))
 	button.add_theme_stylebox_override("pressed", flat(pressed_bg))
@@ -189,7 +205,8 @@ static func add_icon_label_row(
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.clip_text = true
 	label.add_theme_font_size_override("font_size", font_size)
-	label.add_theme_color_override("font_color", Color("e6e6e6"))
+	if use_win10_skin:
+		label.add_theme_color_override("font_color", Color("e6e6e6"))
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	row.add_child(label)
 	return row

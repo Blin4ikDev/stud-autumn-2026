@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://birlh8kr8wk4y"]
 
+[ext_resource type="Theme" uid="uid://cnjtetudthuan" path="res://themes/windows_NT_theme/save1.tres" id="1_ob4nh"]
 [ext_resource type="Texture2D" uid="uid://dr11jdfs3k3y5" path="res://vibecoded/assets/icons/win10/chevron_up.svg" id="icon_chevron_up"]
 [ext_resource type="Texture2D" uid="uid://c806rqvivrh2y" path="res://vibecoded/assets/icons/win10/documents.svg" id="icon_documents"]
 [ext_resource type="Texture2D" uid="uid://cnnytcdh2px7q" path="res://vibecoded/assets/icons/win10/menu.svg" id="icon_menu"]
@@ -19,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://dh8dabi1hk6ow" path="res://vibecoded/assets/icons/win10/windows_logo.svg" id="icon_windows_logo"]
 [ext_resource type="Script" uid="uid://wc0iua0nv3jf" path="res://vibecoded/scripts/windows_10_desktop.gd" id="script"]
 [ext_resource type="Shader" uid="uid://cpb8p7poed7at" path="res://vibecoded/assets/shaders/win10_wallpaper.gdshader" id="shader"]
-[ext_resource type="Theme" uid="uid://cyaaxa63llq6m" path="res://themes/windows_10_dark/theme.tres" id="theme"]
 
 [sub_resource type="ShaderMaterial" id="WallpaperMat"]
 shader = ExtResource("shader")
@@ -180,7 +180,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("theme")
+theme = ExtResource("1_ob4nh")
 script = ExtResource("script")
 
 [node name="Wallpaper" type="ColorRect" parent="." unique_id=2033219736]
@@ -221,7 +221,7 @@ theme_override_constants/v_separation = 6
 
 [node name="IconThisPC" type="Button" parent="DesktopIcons/IconFlow" unique_id=1707148684]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "This PC"
 focus_mode = 0
@@ -246,7 +246,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconThisPC/Layout" unique_id=1144941047]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -260,14 +260,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "This PC"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconRecycleBin" type="Button" parent="DesktopIcons/IconFlow" unique_id=1674640579]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Recycle Bin"
 focus_mode = 0
@@ -292,7 +292,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconRecycleBin/Layout" unique_id=1723823378]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -306,14 +306,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Recycle Bin"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconDocuments" type="Button" parent="DesktopIcons/IconFlow" unique_id=2029839173]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Documents"
 focus_mode = 0
@@ -338,7 +338,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconDocuments/Layout" unique_id=2079368387]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -352,14 +352,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Documents"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconPictures" type="Button" parent="DesktopIcons/IconFlow" unique_id=282040727]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Pictures"
 focus_mode = 0
@@ -384,7 +384,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconPictures/Layout" unique_id=1262216683]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -398,14 +398,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Pictures"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconMusic" type="Button" parent="DesktopIcons/IconFlow" unique_id=1923654562]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Music"
 focus_mode = 0
@@ -430,7 +430,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconMusic/Layout" unique_id=1293888200]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -444,14 +444,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Music"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconVideos" type="Button" parent="DesktopIcons/IconFlow" unique_id=641116673]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Videos"
 focus_mode = 0
@@ -476,7 +476,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconVideos/Layout" unique_id=581570681]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -490,14 +490,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Videos"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="IconSettings" type="Button" parent="DesktopIcons/IconFlow" unique_id=1146903088]
 texture_filter = 1
-custom_minimum_size = Vector2(90, 96)
+custom_minimum_size = Vector2(270, 288)
 layout_mode = 2
 tooltip_text = "Settings"
 focus_mode = 0
@@ -522,7 +522,7 @@ alignment = 1
 
 [node name="Icon" type="TextureRect" parent="DesktopIcons/IconFlow/IconSettings/Layout" unique_id=1405025981]
 texture_filter = 1
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(144, 144)
 layout_mode = 2
 size_flags_horizontal = 4
 mouse_filter = 2
@@ -536,7 +536,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.75)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 36
 text = "Settings"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -561,7 +561,6 @@ anchor_bottom = 1.0
 offset_top = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("TaskbarBG")
 
 [node name="Bar" type="HBoxContainer" parent="Taskbar" unique_id=272378607]
 layout_mode = 2
@@ -573,8 +572,6 @@ custom_minimum_size = Vector2(48, 40)
 layout_mode = 2
 tooltip_text = "Start"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/StartButton" unique_id=846635051]
@@ -601,7 +598,6 @@ custom_minimum_size = Vector2(300, 28)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_filter = 2
-theme_override_styles/panel = SubResource("SearchBG")
 
 [node name="SearchContent" type="HBoxContainer" parent="Taskbar/Bar/SearchBox" unique_id=1737496104]
 layout_mode = 2
@@ -620,7 +616,6 @@ stretch_mode = 5
 
 [node name="SearchHint" type="Label" parent="Taskbar/Bar/SearchBox/SearchContent" unique_id=499987494]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.73, 0.73, 0.73, 1)
 theme_override_font_sizes/font_size = 12
 text = "Search the web and Windows"
 
@@ -629,8 +624,6 @@ custom_minimum_size = Vector2(48, 40)
 layout_mode = 2
 tooltip_text = "Task view"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/TaskViewButton" unique_id=1036512350]
@@ -675,8 +668,6 @@ custom_minimum_size = Vector2(24, 40)
 layout_mode = 2
 tooltip_text = "Show hidden icons"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/Tray/TrayChevron" unique_id=1384748205]
@@ -703,8 +694,6 @@ custom_minimum_size = Vector2(24, 40)
 layout_mode = 2
 tooltip_text = "Network"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/Tray/WifiButton" unique_id=84605568]
@@ -731,8 +720,6 @@ custom_minimum_size = Vector2(24, 40)
 layout_mode = 2
 tooltip_text = "Volume"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/Tray/VolumeButton" unique_id=1845205630]
@@ -759,8 +746,6 @@ custom_minimum_size = Vector2(78, 40)
 layout_mode = 2
 tooltip_text = "Date and time"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="ClockLayout" type="VBoxContainer" parent="Taskbar/Bar/Tray/ClockButton" unique_id=1390992402]
@@ -796,8 +781,6 @@ custom_minimum_size = Vector2(24, 40)
 layout_mode = 2
 tooltip_text = "Notifications"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="Taskbar/Bar/Tray/NotifyButton" unique_id=921209557]
@@ -825,8 +808,6 @@ custom_minimum_size = Vector2(6, 40)
 layout_mode = 2
 tooltip_text = "Show desktop"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="StartMenu" type="PanelContainer" parent="." unique_id=1502732122]
@@ -840,7 +821,6 @@ offset_top = -600.0
 offset_right = 600.0
 offset_bottom = -40.0
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StartMenuBG")
 
 [node name="StartBody" type="HBoxContainer" parent="StartMenu" unique_id=923011687]
 layout_mode = 2
@@ -861,8 +841,6 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 tooltip_text = "All apps"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="StartMenu/StartBody/Rail/MenuButton" unique_id=289547626]
@@ -894,8 +872,6 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 tooltip_text = "User"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="StartMenu/StartBody/Rail/UserButton" unique_id=845370731]
@@ -922,8 +898,6 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 tooltip_text = "Power"
 focus_mode = 0
-theme_override_styles/pressed = SubResource("TaskBtnPressed")
-theme_override_styles/hover = SubResource("TaskBtnHover")
 flat = true
 
 [node name="Glyph" type="TextureRect" parent="StartMenu/StartBody/Rail/PowerButton" unique_id=22089684]
@@ -965,7 +939,6 @@ theme_override_constants/separation = 0
 [node name="HeaderLabel" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn" unique_id=1145187631]
 custom_minimum_size = Vector2(0, 22)
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 14
 text = "Life at a glance"
 vertical_alignment = 1
@@ -984,9 +957,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "File Explorer"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TileBlue")
-theme_override_styles/pressed = SubResource("TileBlueHover")
-theme_override_styles/hover = SubResource("TileBlueHover")
 metadata/desktop_path = "This PC"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileExplorer" unique_id=431330942]
@@ -1016,7 +986,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileExplorer/Row" unique_id=2009311550]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "File Explorer"
 vertical_alignment = 1
@@ -1028,9 +997,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Documents"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TileBlue")
-theme_override_styles/pressed = SubResource("TileBlueHover")
-theme_override_styles/hover = SubResource("TileBlueHover")
 metadata/desktop_path = "Documents"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileDocuments" unique_id=186842486]
@@ -1060,7 +1026,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileDocuments/Row" unique_id=764261116]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "Documents"
 vertical_alignment = 1
@@ -1072,9 +1037,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Pictures"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TileTeal")
-theme_override_styles/pressed = SubResource("TileTealHover")
-theme_override_styles/hover = SubResource("TileTealHover")
 metadata/desktop_path = "Pictures"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TilePictures" unique_id=973649649]
@@ -1104,7 +1066,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TilePictures/Row" unique_id=906648089]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "Pictures"
 vertical_alignment = 1
@@ -1116,9 +1077,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Music"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TileOrange")
-theme_override_styles/pressed = SubResource("TileOrangeHover")
-theme_override_styles/hover = SubResource("TileOrangeHover")
 metadata/desktop_path = "Music"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileMusic" unique_id=562341309]
@@ -1148,7 +1106,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileMusic/Row" unique_id=1349246616]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "Music"
 vertical_alignment = 1
@@ -1160,9 +1117,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Videos"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TilePurple")
-theme_override_styles/pressed = SubResource("TilePurpleHover")
-theme_override_styles/hover = SubResource("TilePurpleHover")
 metadata/desktop_path = "Videos"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileVideos" unique_id=33422669]
@@ -1192,7 +1146,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileVideos/Row" unique_id=1707463763]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "Videos"
 vertical_alignment = 1
@@ -1204,9 +1157,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Settings"
 focus_mode = 0
-theme_override_styles/normal = SubResource("TileGray")
-theme_override_styles/pressed = SubResource("TileGrayHover")
-theme_override_styles/hover = SubResource("TileGrayHover")
 metadata/desktop_path = "Settings"
 
 [node name="Row" type="HBoxContainer" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileSettings" unique_id=1417423396]
@@ -1236,7 +1186,6 @@ stretch_mode = 5
 [node name="Label" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn/TilesGrid/TileSettings/Row" unique_id=902892945]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 12
 text = "Settings"
 vertical_alignment = 1
@@ -1250,7 +1199,6 @@ mouse_filter = 2
 [node name="AllAppsLabel" type="Label" parent="StartMenu/StartBody/MainMargin/MainColumn" unique_id=2133455192]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.63, 0.63, 0.63, 1)
 theme_override_font_sizes/font_size = 12
 text = "All apps"
 vertical_alignment = 1

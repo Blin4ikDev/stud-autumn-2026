@@ -29,6 +29,11 @@ signal start_menu_toggled(opened: bool)
 
 const TASKBAR_HEIGHT := 40.0
 
+# Desktop shortcut geometry (must match the icon nodes in the .tscn).
+const ICON_BUTTON_SIZE := Vector2(270, 288)
+const ICON_PICTURE_SIZE := Vector2(144, 144)
+const ICON_FONT_SIZE := 36
+
 const ICONS := {
 	"folder": preload("res://vibecoded/assets/icons/win10/folder.svg"),
 	"this_pc": preload("res://vibecoded/assets/icons/win10/this_pc.svg"),
@@ -483,17 +488,17 @@ func _bind_desktop_icon(button: Button, path: String, _icon_name: String) -> voi
 	button.button_group = _icon_group
 	button.focus_mode = Control.FOCUS_NONE
 	button.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	button.add_theme_stylebox_override("hover", _icon_hover_style)
-	button.add_theme_stylebox_override("pressed", _icon_selected_style)
-	button.add_theme_stylebox_override("hover_pressed", _icon_selected_style)
-	button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+	Win10Theme.style(button, "hover", _icon_hover_style)
+	Win10Theme.style(button, "pressed", _icon_selected_style)
+	Win10Theme.style(button, "hover_pressed", _icon_selected_style)
+	Win10Theme.style(button, "focus", StyleBoxEmpty.new())
 	button.pressed.connect(_on_desktop_icon_pressed.bind(button, path))
 
 
 func _make_desktop_icon(display_name: String, path: String, icon_value: Variant) -> Button:
 	var button := Button.new()
 	button.name = "Icon_" + display_name.validate_node_name()
-	button.custom_minimum_size = Vector2(90, 96)
+	button.custom_minimum_size = ICON_BUTTON_SIZE
 	button.text = ""
 	button.flat = true
 	button.tooltip_text = display_name
@@ -512,7 +517,7 @@ func _make_desktop_icon(display_name: String, path: String, icon_value: Variant)
 	button.add_child(layout)
 
 	var icon := TextureRect.new()
-	icon.custom_minimum_size = Vector2(48, 48)
+	icon.custom_minimum_size = ICON_PICTURE_SIZE
 	icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
@@ -526,8 +531,8 @@ func _make_desktop_icon(display_name: String, path: String, icon_value: Variant)
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.add_theme_font_size_override("font_size", 12)
-	label.add_theme_color_override("font_color", Color.WHITE)
-	label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.75))
+	Win10Theme.color(label, "font_color", Color.WHITE)
+	Win10Theme.color(label, "font_shadow_color", Color(0, 0, 0, 0.75))
 	label.add_theme_constant_override("shadow_offset_x", 1)
 	label.add_theme_constant_override("shadow_offset_y", 1)
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -592,7 +597,7 @@ func _make_taskbar_button(window: DesktopWindow) -> Button:
 	button.tooltip_text = window.window_title
 	button.focus_mode = Control.FOCUS_NONE
 	Win10Theme.apply_flat_button(button, Color(1, 1, 1, 0.12), Color(1, 1, 1, 0.2))
-	button.add_theme_stylebox_override("normal", Win10Theme.taskbar_app_button(false))
+	Win10Theme.style(button, "normal", Win10Theme.taskbar_app_button(false))
 	Win10Theme.add_centered_texture(button, window.window_icon, 20.0)
 	button.pressed.connect(_on_taskbar_app_pressed.bind(window))
 	return button
@@ -662,8 +667,9 @@ func _update_taskbar_state() -> void:
 			continue
 		var window := key as DesktopWindow
 		var active := window == _active_window and is_instance_valid(window) and window.visible
-		task_button.add_theme_stylebox_override("normal", Win10Theme.taskbar_app_button(active))
-		task_button.add_theme_stylebox_override(
+		Win10Theme.style(task_button, "normal", Win10Theme.taskbar_app_button(active))
+		Win10Theme.style(
+			task_button,
 			"hover",
 			Win10Theme.flat(Color(1, 1, 1, 0.16) if active else Color(1, 1, 1, 0.1))
 		)
