@@ -15,6 +15,7 @@ extends Control
 ##   get_desktop_icon_rect(path_or_name) -> Rect2
 ##   get_desktop_icons() / get_desktop_icon_positions() / find_desktop_icon()
 ##   activate_desktop_icon(path_or_name) -> bool  (open without a click)
+##   canvas_to_world(canvas_point, item) -> Vector2  (only for transformed 2D)
 ##
 ## Signals: folder_opened, folder_closed, folder_navigated, file_activated,
 ## window_focused, start_menu_toggled.
@@ -93,6 +94,7 @@ var _last_icon_time := 0
 
 
 func _ready() -> void:
+	_fit_to_host()
 	filesystem = default_filesystem()
 	_icon_group = ButtonGroup.new()
 	_icon_group.allow_unpress = true
@@ -107,8 +109,25 @@ func _ready() -> void:
 	show_desktop_button.pressed.connect(show_desktop)
 	start_menu.visible = false
 	resized.connect(_layout_maximized_windows)
+	get_viewport().size_changed.connect(_fit_to_host)
 	_update_clock()
 	set_process(true)
+
+
+## The root uses full-rect anchors, which need a parent rect to resolve.
+## A Control parent, a CanvasLayer and the viewport all provide one; a Node2D
+## parent does not, so the layout would collapse to 0x0. In that case the
+## desktop sizes itself to the viewport instead.
+func _fit_to_host() -> void:
+	if not is_inside_tree():
+		return
+	var host := get_parent()
+	if host is Control or (is_instance_valid(host) and host is CanvasLayer):
+		return
+	if host == null or host == get_viewport():
+		return
+	set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+	size = get_viewport_rect().size
 
 
 func _process(delta: float) -> void:
@@ -310,8 +329,12 @@ func icon_texture(value: Variant) -> Texture2D:
 # ---------------------------------------------------------------------------
 # Desktop icon geometry (for show choreography, e.g. a walking character)
 # ---------------------------------------------------------------------------
-# All Rect2/Vector2 values are in the desktop's canvas space: the same space a
-# sibling Control lives in, so they can be used as movement targets directly.
+# Coordinate space: CANVAS space, i.e. the desktop's own 1152x648 design space
+# (origin top-left) after the `canvas_items` stretch is applied. A Camera2D does
+# not change it. Node2D uses the same space for global_position, so these values
+# are directly usable as 2D movement targets when the character sits at the
+# scene root with an identity transform. If the character lives under a
+# transformed parent or a CanvasLayer, convert with canvas_to_world().
 
 ## Every desktop shortcut with its on-screen geometry:
 ##   {"name", "path", "rect", "center", "icon_center", "button"}
@@ -374,6 +397,14 @@ func activate_desktop_icon(path_or_name: Variant) -> bool:
 		button.set_pressed_no_signal(true)
 	open_folder(info["path"])
 	return true
+
+
+## Converts a desktop-canvas point into the space of a 2D item
+## (Node2D character, Sprite2D, Control, ...). Only needed when that item has a
+## non-identity transform or lives under a CanvasLayer; otherwise canvas space
+## and 2D world space are the same.
+func canvas_to_world(canvas_point: Vector2, reference: CanvasItem) -> Vector2:
+	return reference.get_global_transform_with_canvas().affine_inverse() * canvas_point
 
 
 # ---------------------------------------------------------------------------

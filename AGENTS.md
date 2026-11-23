@@ -48,7 +48,14 @@ find_desktop_icon(path_or_name) -> Dictionary       # {} if missing
 get_desktop_icons() -> Array[Dictionary]            # {name, path, rect, center, icon_center, button}
 get_desktop_icon_positions() -> Dictionary          # {path: Vector2}
 activate_desktop_icon(path_or_name) -> bool         # open + select without a click
+canvas_to_world(canvas_point, item) -> Vector2      # only for transformed 2D nodes
 ```
+
+**Coordinate space:** icon geometry is in canvas space — the desktop's own
+1152×648 design space (`canvas_items` stretch), origin top-left. A Camera2D does
+not affect it, and `Node2D.global_position` uses the same space, so values work
+directly as 2D walk targets. Use `canvas_to_world()` only when the 2D node has a
+non-identity transform or sits under a `CanvasLayer`.
 Signals: `folder_opened(path)`, `folder_closed(path)`, `folder_navigated(path)`,
 `file_activated(file_path, item)`, `window_focused(window)`, `start_menu_toggled(open)`.
 
@@ -69,6 +76,13 @@ Icon names: `folder`, `this_pc`, `recycle_bin`, `documents`, `pictures`, `music`
 - Theme fonts/assets live under `themes/windows_10_dark/assets/` (Segoe UI).
 - Icons: `vibecoded/assets/icons/win10/*.svg` (64×64, displayed at 16/20/24/48 with linear filter).
 - Renderer: Mobile, Godot 4.7, base viewport 1152×648 (stretches).
+
+## Instancing under a Node2D
+The root uses full-rect anchors. A `Control`/`CanvasLayer` parent provides the
+rect; a `Node2D` parent does not, so on `_ready` the desktop sizes itself to the
+viewport (`_fit_to_host`). It stays a plain Control child, so it moves/scales
+with that Node2D — keep the Node2D at origin and scale 1 for accurate icon
+positions.
 
 # File ownership
 
