@@ -41,6 +41,13 @@ restore_window(window) / focus_window(window)
 minimize_all() / show_desktop()
 open_start_menu() / close_start_menu() / toggle_start_menu() / is_start_menu_open()
 get_open_folders() -> Array[String]
+# desktop icon geometry (canvas space; use as walk-to targets)
+get_desktop_icon_position(path_or_name) -> Vector2   # icon picture center, INF if missing
+get_desktop_icon_rect(path_or_name) -> Rect2
+find_desktop_icon(path_or_name) -> Dictionary       # {} if missing
+get_desktop_icons() -> Array[Dictionary]            # {name, path, rect, center, icon_center, button}
+get_desktop_icon_positions() -> Dictionary          # {path: Vector2}
+activate_desktop_icon(path_or_name) -> bool         # open + select without a click
 ```
 Signals: `folder_opened(path)`, `folder_closed(path)`, `folder_navigated(path)`,
 `file_activated(file_path, item)`, `window_focused(window)`, `start_menu_toggled(open)`.

@@ -11,6 +11,10 @@ extends Control
 ##   set_wallpaper_colors(top, bottom)   -> recolor the wallpaper shader
 ##   open_start_menu() / close_start_menu() / toggle_start_menu()
 ##   minimize_all() / show_desktop()
+##   get_desktop_icon_position(path_or_name) -> Vector2  (walk-to target)
+##   get_desktop_icon_rect(path_or_name) -> Rect2
+##   get_desktop_icons() / get_desktop_icon_positions() / find_desktop_icon()
+##   activate_desktop_icon(path_or_name) -> bool  (open without a click)
 ##
 ## Signals: folder_opened, folder_closed, folder_navigated, file_activated,
 ## window_focused, start_menu_toggled.
@@ -304,8 +308,95 @@ func icon_texture(value: Variant) -> Texture2D:
 
 
 # ---------------------------------------------------------------------------
+# Desktop icon geometry (for show choreography, e.g. a walking character)
+# ---------------------------------------------------------------------------
+# All Rect2/Vector2 values are in the desktop's canvas space: the same space a
+# sibling Control lives in, so they can be used as movement targets directly.
+
+## Every desktop shortcut with its on-screen geometry:
+##   {"name", "path", "rect", "center", "icon_center", "button"}
+## "rect" is the whole shortcut button, "center" its middle, "icon_center" the
+## middle of the 48 px icon picture (the point to walk to).
+func get_desktop_icons() -> Array[Dictionary]:
+	var result: Array[Dictionary] = []
+	for child in icon_flow.get_children():
+		if child is Button:
+			result.append(_desktop_icon_info(child as Button))
+	return result
+
+
+## Shortcut positions keyed by folder path: {"Documents": Vector2, ...}.
+func get_desktop_icon_positions() -> Dictionary:
+	var result := {}
+	for info in get_desktop_icons():
+		result[str(info["path"])] = info["icon_center"] as Vector2
+	return result
+
+
+## Finds a shortcut by folder path or display name (case-insensitive).
+## Returns {} when there is no such shortcut.
+func find_desktop_icon(path_or_name: Variant) -> Dictionary:
+	var needle := _normalize_path(path_or_name).to_lower()
+	if needle.is_empty():
+		return {}
+	for child in icon_flow.get_children():
+		if not (child is Button):
+			continue
+		var button := child as Button
+		if _normalize_path(button.get_meta("desktop_path", "")).to_lower() == needle:
+			return _desktop_icon_info(button)
+		if str(button.get_meta("desktop_name", "")).to_lower() == needle:
+			return _desktop_icon_info(button)
+	return {}
+
+
+## Point a character should walk to before opening this folder.
+## Returns Vector2.INF when no matching shortcut exists.
+func get_desktop_icon_position(path_or_name: Variant) -> Vector2:
+	var info := find_desktop_icon(path_or_name)
+	return info.get("icon_center", Vector2.INF)
+
+
+## Rect of the whole shortcut button. Returns Rect2() when it does not exist.
+func get_desktop_icon_rect(path_or_name: Variant) -> Rect2:
+	var info := find_desktop_icon(path_or_name)
+	return info.get("rect", Rect2())
+
+
+## Opens the folder behind a shortcut without a mouse click and highlights it.
+## Handy for scripted shows. Returns false when there is no such shortcut.
+func activate_desktop_icon(path_or_name: Variant) -> bool:
+	var info := find_desktop_icon(path_or_name)
+	if info.is_empty():
+		return false
+	var button := info["button"] as Button
+	if is_instance_valid(button):
+		button.set_pressed_no_signal(true)
+	open_folder(info["path"])
+	return true
+
+
+# ---------------------------------------------------------------------------
 # Internal
 # ---------------------------------------------------------------------------
+
+func _desktop_icon_info(button: Button) -> Dictionary:
+	var rect := button.get_global_rect()
+	var icon_center := rect.get_center()
+	for node in button.find_children("*", "TextureRect", true, false):
+		var tex_rect := node as TextureRect
+		if tex_rect.is_visible_in_tree():
+			icon_center = tex_rect.get_global_rect().get_center()
+			break
+	return {
+		"name": str(button.get_meta("desktop_name", button.tooltip_text)),
+		"path": _normalize_path(button.get_meta("desktop_path", "")),
+		"rect": rect,
+		"center": rect.get_center(),
+		"icon_center": icon_center,
+		"button": button,
+	}
+
 
 func _normalize_path(path: Variant) -> String:
 	var value := ""
@@ -350,6 +441,12 @@ func _bind_static_desktop_icons() -> void:
 
 
 func _bind_desktop_icon(button: Button, path: String, _icon_name: String) -> void:
+	button.set_meta("desktop_path", path)
+	if not button.has_meta("desktop_name"):
+		var display := button.tooltip_text.strip_edges()
+		if display.is_empty():
+			display = button.name.trim_prefix("Icon")
+		button.set_meta("desktop_name", display)
 	button.toggle_mode = true
 	button.button_group = _icon_group
 	button.focus_mode = Control.FOCUS_NONE
