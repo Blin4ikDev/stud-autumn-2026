@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bh015emrs8eby"]
+
+[ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://scripts/actor.gd" id="1_jhc1u"]
+[ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="2_hetjn"]
+[ext_resource type="PackedScene" uid="uid://bad1sc6ytvba4" path="res://scenes/DemoPuppet.tscn" id="3_jhc1u"]
+
+[sub_resource type="GDScript" id="GDScript_jhc1u"]
+script/source = "extends Node2D
+
+@onready var actor: Actor = $Actor
+@onready var puppet: Puppet = $DemoPuppet
+@onready var desktop: Windows10Desktop = $\"Windows-10-desktop\"
+
+func _ready():
+	scene()
+
+func scene():
+	await actor.trigger_action
+	
+	print(\"Moving Niko to Documents\")
+	
+	var desktop_icons = desktop.get_desktop_icons()
+	var documents_idx = desktop_icons.find_custom(func(icon): return icon[\"name\"] == \"Documents\")
+	var documents = desktop_icons[documents_idx]
+	
+	puppet.act(Puppet.MoveAction.new(documents[\"center\"], 100))
+	
+	await puppet.action_done
+	
+	await actor.trigger_action
+	
+	print(\"Niko tries to open Documents folder!\")
+	
+	puppet.act(Puppet.JumpAction.new(3))
+	
+	await puppet.action_done
+	
+	var explorer = desktop.open_folder(documents[\"path\"])
+	
+	await actor.trigger_action
+	
+	var close_button_position = explorer.get_window_button_position(\"close\")
+	puppet.act(Puppet.MoveAction.new(close_button_position, 100))
+	
+	await puppet.action_done
+	await actor.trigger_action
+	
+	puppet.act(Puppet.JumpAction.new(3))
+	
+	await puppet.action_done
+	
+	desktop.close_window(explorer)
+	
+	print(\"Scene done!\")
+"
+
+[node name="DemoScene" type="Node2D" unique_id=1612419164]
+script = SubResource("GDScript_jhc1u")
+
+[node name="Actor" type="Node" parent="." unique_id=1176218526]
+script = ExtResource("1_jhc1u")
+metadata/_custom_type_script = "uid://cj705mhou08fu"
+
+[node name="Windows-10-desktop" parent="." unique_id=930439257 instance=ExtResource("2_hetjn")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="DemoPuppet" parent="." unique_id=70029892 instance=ExtResource("3_jhc1u")]
+position = Vector2(621, 375)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=502377196]
+position = Vector2(576, 324)

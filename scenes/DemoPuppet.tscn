@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bad1sc6ytvba4"]
+
+[ext_resource type="Script" uid="uid://dotgbodxghubn" path="res://scripts/puppet/puppet.gd" id="1_ewslq"]
+[ext_resource type="Texture2D" uid="uid://b8kv7vn1lryng" path="res://assets/textures/niko_spritesheet.png" id="1_jlhe5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewslq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(88, 268, 48, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(85, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(134, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(183, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(232, 334, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(89, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(137, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(185, 396, 46, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("1_jlhe5")
+region = Rect2(233, 396, 46, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47ctt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[node name="DemoPuppet" type="CharacterBody2D" unique_id=70029892 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_ewslq")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697826178]
+shape = SubResource("CircleShape2D_ewslq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1211954948]
+sprite_frames = SubResource("SpriteFrames_47ctt")
+animation = &"idle"

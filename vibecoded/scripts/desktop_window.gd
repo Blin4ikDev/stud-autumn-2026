@@ -119,16 +119,19 @@ func _build_chrome() -> void:
 	bar.add_child(_title_label)
 
 	var minimize_button := _make_window_button("\u2014", 12)
+	minimize_button.name = "MinimizeButton"
 	minimize_button.tooltip_text = "Minimize"
 	minimize_button.pressed.connect(minimize)
 	bar.add_child(minimize_button)
 
 	_max_button = _make_window_button("\u25a1", 12)
+	_max_button.name = "MaximizeButton"
 	_max_button.tooltip_text = "Maximize"
 	_max_button.pressed.connect(toggle_maximize)
 	bar.add_child(_max_button)
 
 	var close_button := _make_window_button("\u2715", 11)
+	close_button.name = "CloseButton"
 	close_button.tooltip_text = "Close"
 	close_button.add_theme_stylebox_override("hover", Win10Theme.flat(Win10Theme.CLOSE_HOVER))
 	close_button.add_theme_stylebox_override("pressed", Win10Theme.flat(Win10Theme.CLOSE_PRESSED))
@@ -187,10 +190,64 @@ func set_maximized(value: bool) -> void:
 		_max_button.text = "\u2750" if value else "\u25a1"
 		_max_button.tooltip_text = "Restore" if value else "Maximize"
 	maximized_changed.emit(self, value)
+	force_layout()
 
 
 func toggle_maximize() -> void:
 	set_maximized(not is_maximized)
+
+
+# --- Title-bar button geometry (canvas space, same as desktop icons) -------
+# kind: "minimize", "maximize" or "close".
+
+## Returns the title-bar Button itself, or null when unknown/missing.
+func get_window_button(kind: String) -> Button:
+	var node_name := ""
+	match kind.to_lower().lstrip("_").trim_suffix("button"):
+		"minimize":
+			node_name = "MinimizeButton"
+		"maximize":
+			node_name = "MaximizeButton"
+		"close":
+			node_name = "CloseButton"
+		_:
+			return null
+	if not _built:
+		return null
+	return get_node_or_null("Layout/TitleBar/Bar/" + node_name) as Button
+
+
+## Screen-space rect of a title-bar button. Empty rect when it does not exist.
+func get_window_button_rect(kind: String) -> Rect2:
+	var button := get_window_button(kind)
+	if not is_instance_valid(button):
+		return Rect2()
+	return button.get_global_rect()
+
+
+## Screen-space center of a title-bar button, Vector2.INF when it does not exist.
+func get_window_button_position(kind: String) -> Vector2:
+	var button := get_window_button(kind)
+	if not is_instance_valid(button):
+		return Vector2.INF
+	return button.get_global_rect().get_center()
+
+
+## Forces container layout immediately, so geometry queries (button rects,
+## close position) are correct in the same frame the window was created,
+## moved, resized or maximized. Containers normally sort on the next frame.
+func force_layout() -> void:
+	if not _built:
+		return
+	notification(Control.NOTIFICATION_RESIZED)
+	_force_container_layout(self)
+
+
+func _force_container_layout(node: Node) -> void:
+	for child in node.get_children():
+		if child is Container:
+			(child as Container).notification(Container.NOTIFICATION_SORT_CHILDREN)
+		_force_container_layout(child)
 
 
 func minimize() -> void:

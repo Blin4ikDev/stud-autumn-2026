@@ -51,6 +51,15 @@ activate_desktop_icon(path_or_name) -> bool         # open + select without a cl
 canvas_to_world(canvas_point, item) -> Vector2      # only for transformed 2D nodes
 ```
 
+`open_folder()` returns the `ExplorerWindow`, so window chrome can be queried
+directly (`kind` = `"minimize"`, `"maximize"` or `"close"`):
+
+```gdscript
+window.get_window_button_position(kind) -> Vector2  # center, INF if missing
+window.get_window_button_rect(kind) -> Rect2
+window.get_window_button(kind) -> Button
+```
+
 **Coordinate space:** icon geometry is in canvas space — the desktop's own
 1152×648 design space (`canvas_items` stretch), origin top-left. A Camera2D does
 not affect it, and `Node2D.global_position` uses the same space, so values work

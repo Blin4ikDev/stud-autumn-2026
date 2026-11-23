@@ -1,10 +1,16 @@
-[gd_scene format=3 uid="uid://b41oyidyg2l68"]
+[gd_scene format=3 uid="uid://c2cdbk2ehc4o3"]
 
-[ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="1_hro3w"]
-[ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://actor.gd" id="1_u3y0p"]
-[ext_resource type="Texture2D" uid="uid://b8kv7vn1lryng" path="res://assets/textures/niko_spritesheet.png" id="3_aoya2"]
+[ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://scripts/actor.gd" id="1_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://b8kv7vn1lryng" path="res://assets/textures/niko_spritesheet.png" id="2_rnjyy"]
 
-[sub_resource type="GDScript" id="GDScript_f11xd"]
+[sub_resource type="GDScript" id="GDScript_upcyq"]
+script/source = "extends Node2D
+
+func _ready():
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_0tef2"]
 script/source = "extends CharacterBody2D
 
 @export var actor: Actor
@@ -31,49 +37,49 @@ func _physics_process(_delta: float) -> void:
 	elif sign(self.actor.x_velocity) == -1:
 		sprite.animation = \"walk_left\"
 	
-	self.velocity.x = self.actor.x_velocity * 120.0
+	self.velocity.x = self.actor.x_velocity * 10.0
 	self.move_and_slide()
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hbx0r"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tef2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(88, 268, 48, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(85, 334, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(134, 334, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(183, 334, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(232, 334, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(89, 396, 46, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(137, 396, 46, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(185, 396, 46, 66)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
-atlas = ExtResource("3_aoya2")
+atlas = ExtResource("2_rnjyy")
 region = Rect2(233, 396, 46, 66)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lhm80"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tef2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -118,31 +124,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DemoScene" type="Node2D" unique_id=1612419164]
+[node name="Node2D" type="Node2D" unique_id=1196964039]
+script = SubResource("GDScript_upcyq")
 
-[node name="Actor" type="Node" parent="." unique_id=1176218526]
-script = ExtResource("1_u3y0p")
-metadata/_custom_type_script = "uid://cj705mhou08fu"
+[node name="Actor1" type="Node" parent="." unique_id=1472452438]
+script = ExtResource("1_4dvvg")
 
-[node name="Windows-10-desktop" parent="." unique_id=930439257 instance=ExtResource("1_hro3w")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=701401701 node_paths=PackedStringArray("actor")]
+script = SubResource("GDScript_0tef2")
+actor = NodePath("../Actor1")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=274494524 node_paths=PackedStringArray("actor")]
-position = Vector2(534, 370)
-script = SubResource("GDScript_f11xd")
-actor = NodePath("../Actor")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2117037961]
+shape = SubResource("CircleShape2D_0tef2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=361559182]
-shape = SubResource("CircleShape2D_hbx0r")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=130852843]
+sprite_frames = SubResource("SpriteFrames_0tef2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=243202929]
-sprite_frames = SubResource("SpriteFrames_lhm80")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=502377196]
-position = Vector2(576, 324)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1196578282]

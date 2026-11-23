@@ -181,6 +181,7 @@ func open_folder(path: Variant = "This PC", items: Array = [], window_position :
 		target.y = clampf(target.y, area.position.y + 8.0, maxf(area.position.y + 8.0, area.position.y + area.size.y - window.size.y - 8.0))
 		window.position = target
 	_register_window(window)
+	window.force_layout()
 	return window
 
 
