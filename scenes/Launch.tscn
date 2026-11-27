@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://b2u8f3jjrgyir"]
+
+[ext_resource type="Script" uid="uid://crtleprtt30m7" path="res://scripts/launch.gd" id="1_7u7pr"]
+[ext_resource type="Script" uid="uid://c2kk1gtwuocrx" path="res://scripts/client.gd" id="3_3gyga"]
+[ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="3_gixby"]
+[ext_resource type="Script" uid="uid://4q84q2ohsvk5" path="res://vibecoded/scripts/panel_toggle_button.gd" id="3_n1rt7"]
+
+[node name="Launch" type="Control" unique_id=1650726785 node_paths=PackedStringArray("launch_ui", "client_ui", "scene", "host_button", "ip_address", "connect_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7u7pr")
+launch_ui = NodePath("LaunchUi")
+client_ui = NodePath("CanvasLayer/ClientUi")
+scene = NodePath("Scene")
+host_button = NodePath("LaunchUi/CoreUI/ModeSelector/HostSelector/Host")
+ip_address = NodePath("LaunchUi/CoreUI/ModeSelector/ClientSelector/IpAddress")
+connect_button = NodePath("LaunchUi/CoreUI/ModeSelector/ClientSelector/Connect")
+
+[node name="LaunchUi" type="MarginContainer" parent="." unique_id=697330453]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoreUI" type="VBoxContainer" parent="LaunchUi" unique_id=984000813]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="LaunchUi/CoreUI" unique_id=1556022938]
+layout_mode = 2
+text = "Выберите режим работы"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="LaunchUi/CoreUI" unique_id=1358170071]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="ModeSelector" type="HBoxContainer" parent="LaunchUi/CoreUI" unique_id=2125133222]
+layout_mode = 2
+alignment = 1
+
+[node name="HostSelector" type="VBoxContainer" parent="LaunchUi/CoreUI/ModeSelector" unique_id=825279727]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="LaunchUi/CoreUI/ModeSelector/HostSelector" unique_id=659692395]
+layout_mode = 2
+text = "Хост (ноут с которого показывается презентация)"
+horizontal_alignment = 1
+
+[node name="Host" type="Button" parent="LaunchUi/CoreUI/ModeSelector/HostSelector" unique_id=1797199817]
+layout_mode = 2
+text = "Захостить"
+
+[node name="Spacer" type="Control" parent="LaunchUi/CoreUI/ModeSelector" unique_id=68592351]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ClientSelector" type="VBoxContainer" parent="LaunchUi/CoreUI/ModeSelector" unique_id=1603119395]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="LaunchUi/CoreUI/ModeSelector/ClientSelector" unique_id=1348573403]
+layout_mode = 2
+text = "Контроллер (планшет с которого презентация управляется"
+horizontal_alignment = 1
+
+[node name="IpAddress" type="LineEdit" parent="LaunchUi/CoreUI/ModeSelector/ClientSelector" unique_id=406420563]
+layout_mode = 2
+placeholder_text = "Введите IP адрес хоста"
+
+[node name="Connect" type="Button" parent="LaunchUi/CoreUI/ModeSelector/ClientSelector" unique_id=1760616489]
+layout_mode = 2
+text = "Подключиться"
+
+[node name="Scene" type="Node2D" parent="." unique_id=1893200133]
+
+[node name="Desktop" parent="Scene" unique_id=930439257 instance=ExtResource("3_gixby")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 1
+
+[node name="Camera2D" type="Camera2D" parent="Scene" unique_id=1654193837]
+position = Vector2(576, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=404713006]
+
+[node name="ClientUi" type="Control" parent="CanvasLayer" unique_id=724485985 node_paths=PackedStringArray("open_folder_button", "close_window_button", "start_menu_button", "show_desktop_button", "zoom_in_button", "zoom_out_button", "zoom_value_label", "zoom_reset_button", "status_label", "camera", "scene")]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_3gyga")
+open_folder_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/BtnOpenFolder")
+close_window_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/BtnCloseWindow")
+start_menu_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/BtnStartMenu")
+show_desktop_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/BtnShowDesktop")
+zoom_in_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow/BtnZoomIn")
+zoom_out_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow/BtnZoomOut")
+zoom_value_label = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow/ZoomValue")
+zoom_reset_button = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/BtnZoomReset")
+status_label = NodePath("Layout/MenuPanel/MenuMargin/MenuColumn/StatusLabel")
+camera = NodePath("../../Scene/Camera2D")
+scene = NodePath("../../Scene")
+
+[node name="Layout" type="HBoxContainer" parent="CanvasLayer/ClientUi" unique_id=2101491225]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="ViewArea" type="Control" parent="CanvasLayer/ClientUi/Layout" unique_id=1999417109]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="CollapsePanel" type="Button" parent="CanvasLayer/ClientUi/Layout" unique_id=1884529852]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = ">"
+script = ExtResource("3_n1rt7")
+
+[node name="MenuPanel" type="PanelContainer" parent="CanvasLayer/ClientUi/Layout" unique_id=356361282]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+
+[node name="MenuMargin" type="MarginContainer" parent="CanvasLayer/ClientUi/Layout/MenuPanel" unique_id=1821113177]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MenuColumn" type="VBoxContainer" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin" unique_id=1235593087]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MenuTitle" type="Label" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1631457612]
+layout_mode = 2
+text = "Управление шоу"
+horizontal_alignment = 1
+
+[node name="Sep1" type="HSeparator" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=994047529]
+layout_mode = 2
+
+[node name="BtnOpenFolder" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1643762410]
+layout_mode = 2
+text = "Открыть папку"
+
+[node name="BtnCloseWindow" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1339957073]
+layout_mode = 2
+text = "Закрыть окно"
+
+[node name="BtnStartMenu" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1165396651]
+layout_mode = 2
+text = "Меню Пуск"
+
+[node name="BtnShowDesktop" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1138862864]
+layout_mode = 2
+text = "Свернуть всё"
+
+[node name="Sep2" type="HSeparator" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1321439771]
+layout_mode = 2
+
+[node name="ZoomLabel" type="Label" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=370886691]
+layout_mode = 2
+text = "Масштаб сцены"
+
+[node name="ZoomRow" type="HBoxContainer" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=1373432994]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnZoomOut" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow" unique_id=1209297276]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "−"
+
+[node name="ZoomValue" type="Label" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow" unique_id=135124595]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnZoomIn" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn/ZoomRow" unique_id=383430499]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "+"
+
+[node name="BtnZoomReset" type="Button" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=642249467]
+layout_mode = 2
+text = "Сбросить вид"
+
+[node name="Spacer" type="Control" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=35425076]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/ClientUi/Layout/MenuPanel/MenuMargin/MenuColumn" unique_id=851118953]
+layout_mode = 2
+text = "Не подключено"
+horizontal_alignment = 1

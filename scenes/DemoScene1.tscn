@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cj705mhou08fu" path="res://scripts/actor.gd" id="1_jhc1u"]
 [ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="2_hetjn"]
-[ext_resource type="PackedScene" uid="uid://bad1sc6ytvba4" path="res://scenes/DemoPuppet.tscn" id="3_jhc1u"]
+[ext_resource type="PackedScene" uid="uid://bad1sc6ytvba4" path="res://scenes/puppets/DemoPuppet.tscn" id="3_jhc1u"]
 
 [sub_resource type="GDScript" id="GDScript_jhc1u"]
 script/source = "extends Node2D
