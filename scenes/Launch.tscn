@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c2kk1gtwuocrx" path="res://scripts/client.gd" id="3_3gyga"]
 [ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="3_gixby"]
 [ext_resource type="Script" uid="uid://4q84q2ohsvk5" path="res://vibecoded/scripts/panel_toggle_button.gd" id="3_n1rt7"]
+[ext_resource type="Script" uid="uid://doifeiu4ji1ov" path="res://scripts/input_relay.gd" id="4_n1rt7"]
 
 [node name="Launch" type="Control" unique_id=1650726785 node_paths=PackedStringArray("launch_ui", "client_ui", "scene", "host_button", "ip_address", "connect_button")]
 layout_mode = 3
@@ -122,13 +123,14 @@ scene = NodePath("../../Scene")
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="ViewArea" type="Control" parent="CanvasLayer/ClientUi/Layout" unique_id=1999417109]
+[node name="ViewArea" type="Control" parent="CanvasLayer/ClientUi/Layout" unique_id=1999417109 node_paths=PackedStringArray("client_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 2
+mouse_filter = 1
+script = ExtResource("4_n1rt7")
+client_ui = NodePath("../..")
 
 [node name="CollapsePanel" type="Button" parent="CanvasLayer/ClientUi/Layout" unique_id=1884529852]
 custom_minimum_size = Vector2(18, 0)

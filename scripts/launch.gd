@@ -2,7 +2,7 @@ extends Control
 class_name Launch
 
 @export var launch_ui: Control
-@export var client_ui: Control
+@export var client_ui: Client
 @export var scene: Node2D
 @export var host_button: Button
 @export var ip_address: LineEdit
@@ -51,6 +51,8 @@ func connect_to_session(ip: String):
 	self.set_node_as_active(self.scene, true)
 	self.client_ui.show()
 	self.set_node_as_active(self.client_ui, true)
+	
+	self.client_ui.status_update(true, ip)
 
 
 
