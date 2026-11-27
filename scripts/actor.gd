@@ -22,7 +22,7 @@ func _physics_process(_delta: float) -> void:
 	if abs(self.x_velocity) < 0.18:
 		self.x_velocity = 0
 	
-	var is_button_pressed = Input.is_joy_button_pressed(self.joy, self.action_button)
+	var is_button_pressed = Input.is_key_pressed(KEY_W)
 	if is_button_pressed and not self.action_triggered:
 		trigger_action.emit()
 		self.action_triggered = true

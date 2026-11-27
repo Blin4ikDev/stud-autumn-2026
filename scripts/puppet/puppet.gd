@@ -65,6 +65,7 @@ signal action_done(id: String)
 
 
 @export var sprite: AnimatedSprite2D
+@export var chatbox: AnimatedSprite2D
 
 var actions_queue: Array
 var current_action: Action
@@ -74,6 +75,7 @@ func act(action: Action):
 
 func _ready():
 	sprite.play("idle")
+	chatbox.play("default")
 
 func _physics_process(delta: float) -> void:
 	if self.current_action == null:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dotgbodxghubn" path="res://scripts/puppet/puppet.gd" id="1_ewslq"]
 [ext_resource type="Texture2D" uid="uid://b8kv7vn1lryng" path="res://assets/textures/niko_spritesheet.png" id="1_jlhe5"]
+[ext_resource type="SpriteFrames" uid="uid://cjoq0wl171tn8" path="res://assets/chat_animation.tres" id="3_47ctt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ewslq"]
 
@@ -86,13 +87,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DemoPuppet" type="CharacterBody2D" unique_id=70029892 node_paths=PackedStringArray("sprite")]
+[node name="DemoPuppet" type="CharacterBody2D" unique_id=70029892 node_paths=PackedStringArray("sprite", "chatbox")]
 script = ExtResource("1_ewslq")
-sprite = NodePath("AnimatedSprite2D")
+sprite = NodePath("Body")
+chatbox = NodePath("ChatBox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697826178]
 shape = SubResource("CircleShape2D_ewslq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1211954948]
+[node name="Body" type="AnimatedSprite2D" parent="." unique_id=1211954948]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_47ctt")
 animation = &"idle"
+
+[node name="ChatBox" type="AnimatedSprite2D" parent="." unique_id=930957445]
+position = Vector2(0, -95)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("3_47ctt")
+frame_progress = 0.30673388
