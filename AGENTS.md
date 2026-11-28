@@ -27,9 +27,10 @@ Do not modify the vendored theme; override styles in `Win10Theme` or per node.
 
 ## Show API (on the root node)
 ```gdscript
-open_folder(path, items := [], window_position := Vector2.INF) -> ExplorerWindow
+open_folder(path, items := [], window_position := Vector2.INF, window_id := 0) -> ExplorerWindow
   # path: String ("This PC/Documents") or Array of segments
   # items: optional Array of item dictionaries; also registers override
+  # window_id: 0 = auto; pass take_window_id() when the window is created remotely
 set_folder_items(path, items)      # replace one folder's contents
 clear_folder_items(path)           # fall back to base filesystem
 set_filesystem(tree)               # replace whole virtual FS {path: [items]}
@@ -41,6 +42,11 @@ restore_window(window) / focus_window(window)
 minimize_all() / show_desktop()
 open_start_menu() / close_start_menu() / toggle_start_menu() / is_start_menu_open()
 get_open_folders() -> Array[String]
+# window ids: stable identity, use them for RPC instead of NodePath
+get_window_id(window) -> int        # 0 if not registered
+get_window_by_id(window_id) -> DesktopWindow   # null if closed
+get_windows() -> Array[DesktopWindow]
+take_window_id() -> int             # reserve id for a window created on the peer
 # desktop icon geometry (canvas space; use as walk-to targets)
 get_desktop_icon_position(path_or_name) -> Vector2   # icon picture center, INF if missing
 get_desktop_icon_rect(path_or_name) -> Rect2
@@ -65,8 +71,13 @@ window.get_window_button(kind) -> Button
 not affect it, and `Node2D.global_position` uses the same space, so values work
 directly as 2D walk targets. Use `canvas_to_world()` only when the 2D node has a
 non-identity transform or sits under a `CanvasLayer`.
-Signals: `folder_opened(path)`, `folder_closed(path)`, `folder_navigated(path)`,
-`file_activated(file_path, item)`, `window_focused(window)`, `start_menu_toggled(open)`.
+Signals on the desktop: `window_opened(window)`, `window_closed(window)`,
+`window_focused(window)`, `start_menu_toggled(open)`.
+
+Signals on windows (`DesktopWindow` / `ExplorerWindow`): `closed(window)`,
+`focus_requested(window)`, `minimized(window)`, `restored(window)`,
+`title_changed(window, title)`, `maximized_changed(window, maximized)`,
+`moved(window, new_position)`, `navigated(path)`, `file_activated(file_path, item)`.
 
 Item dictionary: `{"name", "type" ("folder"|"file"), "icon", "path"}`.
 `path` is optional; when omitted it becomes `<current folder>/<name>`.

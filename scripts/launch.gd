@@ -29,6 +29,8 @@ func host_session():
 		push_error(error_string(err))
 		return
 	
+	multiplayer.multiplayer_peer = self.net
+	
 	self.initialized = true
 	self.launch_ui.hide()
 	self.set_node_as_active(self.launch_ui, false)
@@ -44,6 +46,8 @@ func connect_to_session(ip: String):
 		push_error(error_string(err))
 		return
 	
+	multiplayer.multiplayer_peer = self.net
+	
 	self.initialized = true
 	self.launch_ui.hide()
 	self.set_node_as_active(self.launch_ui, false)
@@ -53,6 +57,7 @@ func connect_to_session(ip: String):
 	self.set_node_as_active(self.client_ui, true)
 	
 	self.client_ui.status_update(true, ip)
+	$Scene/DesktopSync.init_client()
 
 
 

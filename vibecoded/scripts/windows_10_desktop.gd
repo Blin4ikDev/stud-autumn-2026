@@ -17,15 +17,16 @@ extends Control
 ##   activate_desktop_icon(path_or_name) -> bool  (open without a click)
 ##   canvas_to_world(canvas_point, item) -> Vector2  (only for transformed 2D)
 ##
-## Signals: folder_opened, folder_closed, folder_navigated, file_activated,
-## window_focused, start_menu_toggled.
+## Signals: window_opened, window_closed, window_focused, start_menu_toggled.
+## Folder-level signals live on the windows: ExplorerWindow.navigated and
+## ExplorerWindow.file_activated.
 
-signal folder_opened(path: String)
-signal folder_closed(path: String)
-signal folder_navigated(path: String)
-signal file_activated(file_path: String, item: Dictionary)
 signal window_focused(window: DesktopWindow)
 signal start_menu_toggled(opened: bool)
+## Emitted after a new window is fully built and positioned.
+signal window_opened(window: DesktopWindow)
+## Emitted when a window is closed (still valid, freed a moment later).
+signal window_closed(window: DesktopWindow)
 
 const TASKBAR_HEIGHT := 40.0
 
@@ -81,6 +82,8 @@ const START_APPS := [
 var filesystem: Dictionary = {}
 var _folder_overrides: Dictionary = {}
 var _windows: Array[DesktopWindow] = []
+var _windows_by_id: Dictionary = {}   # window_id -> DesktopWindow
+var _next_window_id := 1
 var _taskbar_buttons: Dictionary = {}
 var _active_window: DesktopWindow = null
 var _icon_group: ButtonGroup
@@ -158,7 +161,7 @@ func _input(event: InputEvent) -> void:
 ## Opens an Explorer window. `path` accepts a String ("This PC/Documents") or
 ## an Array of segments. `items` optionally supplies the folder contents
 ## directly (and registers them for later navigation).
-func open_folder(path: Variant = "This PC", items: Array = [], window_position := Vector2.INF) -> Control:
+func open_folder(path: Variant = "This PC", items: Array = [], window_position := Vector2.INF, window_id := 0) -> ExplorerWindow:
 	var normalized := _normalize_path(path)
 	if normalized.is_empty():
 		normalized = "This PC"
@@ -180,8 +183,10 @@ func open_folder(path: Variant = "This PC", items: Array = [], window_position :
 		target.x = clampf(target.x, area.position.x + 8.0, maxf(area.position.x + 8.0, area.position.x + area.size.x - window.size.x - 8.0))
 		target.y = clampf(target.y, area.position.y + 8.0, maxf(area.position.y + 8.0, area.position.y + area.size.y - window.size.y - 8.0))
 		window.position = target
-	_register_window(window)
+	_register_window(window, window_id)
 	window.force_layout()
+	window.report_moved()
+	window_opened.emit(window)
 	return window
 
 
@@ -261,6 +266,39 @@ func restore_window(window: DesktopWindow) -> void:
 
 func focus_window(window: DesktopWindow) -> void:
 	_focus_window(window)
+
+
+## Stable id of a window, assigned when it was registered. 0 when unregistered.
+func get_window_id(window: DesktopWindow) -> int:
+	if is_instance_valid(window):
+		return window.window_id
+	return 0
+
+
+## Looks a window up by the id returned from get_window_id().
+## Named _by_id because Node already has get_window().
+func get_window_by_id(window_id: int) -> DesktopWindow:
+	var window := _windows_by_id.get(window_id) as DesktopWindow
+	if is_instance_valid(window):
+		return window
+	return null
+
+
+## All open windows, in creation order.
+func get_windows() -> Array[DesktopWindow]:
+	var result: Array[DesktopWindow] = []
+	for window in _windows:
+		if is_instance_valid(window):
+			result.append(window)
+	return result
+
+
+## Reserves an id for a window created on the other peer, so both sides agree
+## on the number. Pass it back to open_folder(window_id).
+func take_window_id() -> int:
+	var window_id := _next_window_id
+	_next_window_id += 1
+	return window_id
 
 
 func minimize_all() -> void:
@@ -571,7 +609,8 @@ func _build_app_list() -> void:
 		app_list.add_child(button)
 
 
-func _register_window(window: DesktopWindow) -> void:
+func _register_window(window: DesktopWindow, window_id := 0) -> void:
+	_claim_window_id(window, window_id)
 	_windows.append(window)
 	window.focus_requested.connect(_on_window_focus_requested)
 	window.minimized.connect(_on_window_minimized)
@@ -583,7 +622,15 @@ func _register_window(window: DesktopWindow) -> void:
 	_taskbar_buttons[window] = task_button
 
 	_focus_window(window)
-	folder_opened.emit(window.folder_path)
+
+
+func _claim_window_id(window: DesktopWindow, requested_id := 0) -> void:
+	var window_id := requested_id
+	if window_id <= 0:
+		window_id = _next_window_id
+	_next_window_id = maxi(_next_window_id, window_id) + 1
+	window.window_id = window_id
+	_windows_by_id[window_id] = window
 
 
 func _make_taskbar_button(window: DesktopWindow) -> Button:
@@ -634,6 +681,8 @@ func _on_window_minimized(window: DesktopWindow) -> void:
 func _on_window_closed(window: DesktopWindow) -> void:
 	var path := window.folder_path
 	_windows.erase(window)
+	if _windows_by_id.get(window.window_id) == window:
+		_windows_by_id.erase(window.window_id)
 	var task_button: Button = _taskbar_buttons.get(window)
 	_taskbar_buttons.erase(window)
 	if is_instance_valid(task_button):
@@ -646,7 +695,7 @@ func _on_window_closed(window: DesktopWindow) -> void:
 				_focus_window(candidate)
 				break
 	_update_taskbar_state()
-	folder_closed.emit(path)
+	window_closed.emit(window)
 
 
 func _on_window_title_changed(window: DesktopWindow, title: String) -> void:
@@ -710,15 +759,11 @@ func _update_clock() -> void:
 		date_label.text = "%d/%d/%d" % [int(date["month"]), int(date["day"]), int(date["year"])]
 
 
+## Keeps the taskbar button text in sync with the folder shown in the window.
 func notify_folder_navigation(window: DesktopWindow, path: String) -> void:
 	var task_button: Button = _taskbar_buttons.get(window)
 	if is_instance_valid(task_button):
 		task_button.tooltip_text = _display_name(path)
-	folder_navigated.emit(path)
-
-
-func notify_file_activated(file_path: String, item: Dictionary) -> void:
-	file_activated.emit(file_path, item)
 
 
 static func default_filesystem() -> Dictionary:

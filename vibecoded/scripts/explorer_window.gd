@@ -4,6 +4,11 @@ extends DesktopWindow
 ## File Explorer style window. Navigation is driven by the desktop's
 ## virtual filesystem (see Windows10Desktop.get_folder_items).
 
+## Emitted after the window switched to another folder (also on first open).
+signal navigated(path: String)
+## Emitted when a file item is activated (double click / single click).
+signal file_activated(file_path: String, item: Dictionary)
+
 const QUICK_ACCESS: Array[Dictionary] = [
 	{"label": "Desktop", "path": "Desktop", "icon": "folder"},
 	{"label": "Downloads", "path": "Downloads", "icon": "folder"},
@@ -231,6 +236,8 @@ func navigate_to(path: String, record := true) -> void:
 	if desktop and desktop.has_method("notify_folder_navigation"):
 		desktop.notify_folder_navigation(self, normalized)
 
+	navigated.emit(normalized)
+
 
 func _normalize(path: String) -> String:
 	var value := path.strip_edges().replace("\\", "/")
@@ -350,8 +357,8 @@ func _activate_item(item: Dictionary) -> void:
 	var resolved := _resolve_item_path(item)
 	if str(item.get("type", "folder")) == "folder":
 		navigate_to(resolved)
-	elif desktop and desktop.has_method("notify_file_activated"):
-		desktop.notify_file_activated(resolved, item.duplicate(true))
+	else:
+		file_activated.emit(resolved, item.duplicate(true))
 
 
 func _resolve_item_path(item: Dictionary) -> String:

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c2kk1gtwuocrx" path="res://scripts/client.gd" id="3_3gyga"]
 [ext_resource type="PackedScene" uid="uid://birlh8kr8wk4y" path="res://vibecoded/Windows-10-desktop.tscn" id="3_gixby"]
 [ext_resource type="Script" uid="uid://4q84q2ohsvk5" path="res://vibecoded/scripts/panel_toggle_button.gd" id="3_n1rt7"]
+[ext_resource type="Script" uid="uid://b8gkddurryex7" path="res://scripts/desktop_sync.gd" id="3_rags4"]
 [ext_resource type="Script" uid="uid://doifeiu4ji1ov" path="res://scripts/input_relay.gd" id="4_n1rt7"]
 
 [node name="Launch" type="Control" unique_id=1650726785 node_paths=PackedStringArray("launch_ui", "client_ui", "scene", "host_button", "ip_address", "connect_button")]
@@ -22,7 +23,6 @@ ip_address = NodePath("LaunchUi/CoreUI/ModeSelector/ClientSelector/IpAddress")
 connect_button = NodePath("LaunchUi/CoreUI/ModeSelector/ClientSelector/Connect")
 
 [node name="LaunchUi" type="MarginContainer" parent="." unique_id=697330453]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,6 +81,7 @@ layout_mode = 2
 text = "Подключиться"
 
 [node name="Scene" type="Node2D" parent="." unique_id=1893200133]
+visible = false
 
 [node name="Desktop" parent="Scene" unique_id=930439257 instance=ExtResource("3_gixby")]
 anchors_preset = 0
@@ -95,9 +96,15 @@ mouse_filter = 1
 [node name="Camera2D" type="Camera2D" parent="Scene" unique_id=1654193837]
 position = Vector2(576, 324)
 
+[node name="DesktopSync" type="Node" parent="Scene" unique_id=1005838494 node_paths=PackedStringArray("desktop")]
+script = ExtResource("3_rags4")
+desktop = NodePath("../Desktop")
+metadata/_custom_type_script = "uid://b8gkddurryex7"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=404713006]
 
 [node name="ClientUi" type="Control" parent="CanvasLayer" unique_id=724485985 node_paths=PackedStringArray("open_folder_button", "close_window_button", "start_menu_button", "show_desktop_button", "zoom_in_button", "zoom_out_button", "zoom_value_label", "zoom_reset_button", "status_label", "camera", "scene")]
+visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 15
@@ -123,12 +130,13 @@ scene = NodePath("../../Scene")
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="ViewArea" type="Control" parent="CanvasLayer/ClientUi/Layout" unique_id=1999417109 node_paths=PackedStringArray("client_ui")]
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("4_n1rt7")
 client_ui = NodePath("../..")
 

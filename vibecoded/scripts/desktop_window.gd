@@ -7,14 +7,24 @@ extends PanelContainer
 signal closed(window: DesktopWindow)
 signal focus_requested(window: DesktopWindow)
 signal minimized(window: DesktopWindow)
+## Emitted when a minimized window is shown again (taskbar click, restore_window, ...).
+signal restored(window: DesktopWindow)
 signal title_changed(window: DesktopWindow, title: String)
 signal maximized_changed(window: DesktopWindow, maximized: bool)
+## Emitted when the window position changes (drag, resize, maximize, restore).
+signal moved(window: DesktopWindow, new_position: Vector2)
+## Emitted on every frame the position changes, i.e. continuously while the
+## window is being dragged. Use `moved` for "gesture finished", this one for
+## live tracking.
+signal position_changed(window: DesktopWindow, new_position: Vector2)
 
 const TITLEBAR_HEIGHT := 32.0
 const RESIZE_CORNER := 18.0
 
 var desktop: Node = null
 var folder_path := ""
+## Stable id assigned by Windows10Desktop when the window is registered.
+var window_id := 0
 var window_title := "Window":
 	set(value):
 		window_title = value
@@ -46,12 +56,22 @@ var _restore_rect := Rect2()
 var _visibility_tween: Tween
 var _closing := false
 var _corner_cursor := false
+var _last_reported_position := Vector2.INF
+var _last_position_sample := Vector2.INF
 
 
 func _ready() -> void:
 	if not _built:
 		_build_chrome()
 		_build_content(_content_root)
+	_last_position_sample = position
+
+
+func _process(_delta: float) -> void:
+	if position.is_equal_approx(_last_position_sample):
+		return
+	_last_position_sample = position
+	position_changed.emit(self, position)
 
 
 ## Override in subclasses to fill the client area.
@@ -191,6 +211,7 @@ func set_maximized(value: bool) -> void:
 		_max_button.tooltip_text = "Restore" if value else "Maximize"
 	maximized_changed.emit(self, value)
 	force_layout()
+	report_moved()
 
 
 func toggle_maximize() -> void:
@@ -267,12 +288,16 @@ func minimize() -> void:
 func restore() -> void:
 	if _closing:
 		return
+	# Only a window that was actually hidden counts as restored.
+	var was_hidden := not visible
 	if _visibility_tween:
 		_visibility_tween.kill()
 	visible = true
 	modulate.a = 0.0
 	_visibility_tween = create_tween()
 	_visibility_tween.tween_property(self, "modulate:a", 1.0, 0.12)
+	if was_hidden:
+		restored.emit(self)
 
 
 func request_close() -> void:
@@ -286,6 +311,15 @@ func request_close() -> void:
 	await tween.finished
 	closed.emit(self)
 	queue_free()
+
+
+## Emits `moved` if the position changed since the last report. Safe to call
+## often; used by the show/network layer to push window geometry.
+func report_moved() -> void:
+	if position.is_equal_approx(_last_reported_position):
+		return
+	_last_reported_position = position
+	moved.emit(self, position)
 
 
 func _desktop_area() -> Rect2:
@@ -355,8 +389,11 @@ func _input(event: InputEvent) -> void:
 				_corner_cursor = false
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+		var was_moving := _dragging or _resizing
 		_dragging = false
 		_resizing = false
+		if was_moving:
+			report_moved()
 
 
 func _notification(what: int) -> void:
